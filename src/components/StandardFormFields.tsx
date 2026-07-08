@@ -23,6 +23,7 @@ export interface FormFieldProps {
   inputClassName?: string;
   disabled?: boolean;
   icon?: React.ReactNode;
+  submitted?: boolean;
 }
 
 export const StandardLabel: React.FC<{ label: string; id?: string }> = ({ label, id }) => (
@@ -55,7 +56,8 @@ export const StandardInput: React.FC<FormFieldProps> = ({
   inputClassName,
   disabled,
   icon,
-  required
+  required,
+  submitted
 }) => {
   const [isTouched, setIsTouched] = useState(false);
 
@@ -91,7 +93,7 @@ export const StandardInput: React.FC<FormFieldProps> = ({
           )}
         />
       </div>
-      {isTouched && error && <ErrorMessage message={error} />}
+      {(isTouched || submitted) && error && <ErrorMessage message={error} />}
     </div>
   );
 };
@@ -328,7 +330,8 @@ export const StandardTextArea: React.FC<FormFieldProps & { rows?: number }> = ({
   className,
   inputClassName,
   disabled,
-  rows = 4
+  rows = 4,
+  submitted
 }) => {
   const [isTouched, setIsTouched] = useState(false);
 
@@ -355,7 +358,7 @@ export const StandardTextArea: React.FC<FormFieldProps & { rows?: number }> = ({
           inputClassName
         )}
       />
-      {isTouched && error && <ErrorMessage message={error} />}
+      {(isTouched || submitted) && error && <ErrorMessage message={error} />}
     </div>
   );
 };

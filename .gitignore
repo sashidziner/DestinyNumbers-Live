@@ -6,3 +6,5 @@ coverage/
 *.log
 .env*
 !.env.example
+public/mail-config.php
+public/vendor/

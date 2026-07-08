@@ -1,4 +1,3 @@
-import { imgUrl } from '../lib/utils';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calculator, Scan, Smartphone, X, Heart, Palette, Briefcase, Calendar, Sparkles, ArrowRight, Compass } from 'lucide-react';
@@ -151,11 +150,9 @@ export default function ToolsPage() {
             exit={{ opacity: 0, y: -20 }}
             className="w-full"
           >
-            <header 
-              className="relative w-full overflow-hidden flex items-center justify-center text-center bg-cover bg-center shadow-md mb-8 px-4 pt-[95px] lg:pt-[135px] pb-5"
-              style={{ 
-                backgroundImage: `linear-gradient(rgba(13, 27, 62, 0.72), rgba(13, 27, 62, 0.72)), url(imgUrl('/assets/img/tools-bg-2.jpg')`
-              }}
+            <header
+              className="relative w-full overflow-hidden flex items-center justify-center text-center bg-[#0D1B3E] shadow-md px-4 py-16"
+              style={{ minHeight: '280px' }}
             >
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
@@ -163,28 +160,19 @@ export default function ToolsPage() {
                 transition={{ duration: 0.8 }}
                 className="relative z-10 max-w-2xl -mt-1"
               >
-                <div className="mb-2">
-                  <h2 style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '26px',
-                    fontWeight: 400,
-                    lineHeight: 1.1,
-                    margin: '0 0 2px 0',
-                    color: '#ffffff',
-                    letterSpacing: '0',
-                    textAlign: 'center'
-                  }}>
-                    The Esoteric <span style={{ color: '#C9A84C' }}>Analytical Hub</span>
-                  </h2>
-                  <div style={{ width: '50px', height: '1px', background: '#C9A84C', margin: '2px auto 0' }}></div>
-                </div>
-                <p className="max-w-xl mx-auto text-[#F5ECD7]/90 text-[12px] font-normal leading-snug italic">
-                  Practical analyzers designed to provide data-driven insights into your cosmic alignment before your bespoke consultation.
+                <span className="text-[10px] tracking-[0.3em] font-bold uppercase text-[#C9A84C] opacity-80 block mb-2">
+                  Esoteric Analytical Hub
+                </span>
+                <h1 className="font-heading text-3xl md:text-5xl text-white leading-tight mb-3 font-normal italic">
+                  The Esoteric <span className="text-[#C9A84C]">Analytical Hub</span>
+                </h1>
+                <p className="max-w-xl mx-auto text-white/80 text-[14px] md:text-[15px] font-light leading-relaxed">
+                  "Practical analyzers designed to provide data-driven insights into your cosmic alignment before your bespoke consultation."
                 </p>
               </motion.div>
             </header>
 
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6 py-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tools.map((tool, idx) => (
                   <motion.div

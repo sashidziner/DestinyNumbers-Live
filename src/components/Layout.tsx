@@ -737,6 +737,7 @@ export function Footer() {
             <Link to="/privacy" className="hover:text-warm-accent">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-warm-accent">Terms of Use</Link>
             <Link to="/refund" className="hover:text-warm-accent">Refund Policy</Link>
+            <Link to="/contact" className="hover:text-warm-accent">Contact Us</Link>
           </div>
         </div>
       </div>
