@@ -2,8 +2,14 @@
 import React from 'react';
 import { Scale } from 'lucide-react';
 import { LegalPageLayout } from '../components/LegalPageLayout';
+import { useSEO } from '../lib/useSEO';
 
 export default function RefundPolicy() {
+  useSEO({
+    title: 'Refund & Cancellation Policy | Destiny Numbers',
+    description: 'Read the Destiny Numbers refund and cancellation policy for consultations, courses and products.',
+    keywords: 'destiny numbers refund policy, cancellation policy, refunds, consultation refund',
+  });
   return (
     <LegalPageLayout 
       title="Cancellation and Refund" 

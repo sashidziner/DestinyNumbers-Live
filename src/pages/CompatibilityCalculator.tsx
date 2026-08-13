@@ -14,8 +14,9 @@ import {
 import { cn } from '../lib/utils';
 import { StandardNameInput, StandardDateInput } from '../components/StandardFormFields';
 import { calculateLoShuGrid, calculateBirthNumber, calculateLifePathNumber } from '../lib/numerology';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BRAND_DATA } from '../lib/constants';
+import { useSEO } from '../lib/useSEO';
 
 // Compatibility Chart Data
 const compatibilityChart: Record<number, { lucky: number[], neutral: number[], enemy: number[] }> = {
@@ -53,7 +54,11 @@ interface CalculationResult {
 }
 
 export default function CompatibilityCalculator() {
-  const navigate = useNavigate();
+  useSEO({
+    title: 'Numerology Compatibility Calculator | Free Online Tool',
+    description: 'Check numerology compatibility between two names or dates of birth with our free calculator. Understand relationship, marriage and business-partner match.',
+    keywords: 'numerology compatibility, name compatibility calculator, marriage compatibility numerology, love compatibility numbers, partner match calculator',
+  });
   const whatsappNumber = BRAND_DATA.phone.replace(/[^0-9]/g, '');
   const [boyName, setBoyName] = useState('');
   const [boyDob, setBoyDob] = useState('');
@@ -144,7 +149,7 @@ export default function CompatibilityCalculator() {
         {/* Section 1: Hero Banner */}
         <div className="text-center mb-10">
           <div className="mb-4">
-            <h2 style={{
+            <h1 style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '24px',
               fontWeight: 400,
@@ -155,32 +160,14 @@ export default function CompatibilityCalculator() {
               textAlign: 'center'
             }}>
               Numerology <span style={{ color: '#C9A84C' }}>compatibility</span> calculator
-            </h2>
+            </h1>
             <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
           </div>
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-[15px] md:text-[16px] text-[#1C3557]/60 max-w-2xl mx-auto font-sans leading-relaxed italic"
-          >
-            Discover relationship compatibility using Birth and Life Path Numbers. Decode the energetic algorithms between two souls.
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-            className="mt-6"
-          >
-            <button
-              onClick={() => document.getElementById('input-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-10 py-5 rounded-none bg-mystic-navy text-warm-off-white font-display font-black tracking-widest text-xs hover:scale-105 active:scale-95 transition-all shadow-2xl"
-            >
-              Analyze synchronicity
-            </button>
-          </motion.div>
+          <p className="text-sm text-[#1C3557]/70 max-w-2xl mx-auto italic">
+            Also explore our <Link to="/calculator" className="text-[#C9A84C] font-semibold hover:underline">free numerology calculator</Link>,{' '}
+            <Link to="/services/marriage-matching" className="text-[#C9A84C] font-semibold hover:underline">marriage matching</Link> and{' '}
+            <Link to="/services/relationship-compatibility" className="text-[#C9A84C] font-semibold hover:underline">relationship compatibility</Link> consultations.
+          </p>
         </div>
 
         {/* SECTION 2: Input Cards */}
@@ -437,9 +424,9 @@ export default function CompatibilityCalculator() {
                  </p>
                  
                  <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <button className="px-12 py-6 bg-[#C9A84C] text-[#1C3557] font-display font-black tracking-widest text-[12px] uppercase shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-4 rounded-none border border-transparent" onClick={() => navigate('/consultation')}>
+                    <Link to="/consultation" className="px-12 py-6 bg-[#C9A84C] text-[#1C3557] font-display font-black tracking-widest text-[12px] uppercase shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-4 rounded-none border border-transparent">
                        Book private session <Star className="w-4 h-4" />
-                    </button>
+                    </Link>
                     <button className="px-12 py-6 bg-white/5 border border-white/20 text-white font-display font-black tracking-widest text-[12px] uppercase hover:bg-white/10 transition-all flex items-center justify-center gap-4 rounded-none" onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank', 'noopener,noreferrer')}>
                        WhatsApp sync <Send className="w-4 h-4 text-[#C9A84C]" />
                     </button>

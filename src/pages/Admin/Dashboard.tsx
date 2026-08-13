@@ -18,8 +18,14 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { cn } from '../../lib/utils';
 import { StandardInput, StandardTextArea, StandardSelect } from '../../components/StandardFormFields';
+import { useSEO } from '../../lib/useSEO';
 
 export default function AdminDashboard() {
+  useSEO({
+    title: 'Admin Dashboard | Destiny Numbers',
+    description: 'Destiny Numbers admin dashboard — manage blogs, products and site content.',
+    keywords: 'destiny numbers admin, cms dashboard',
+  });
   const { user, isAdmin, loading: authLoading, signOut } = useAuth();
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<BlogPost[]>([]);

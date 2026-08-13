@@ -62,9 +62,6 @@ export function NumerologyCalculator() {
             </h2>
             <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
           </div>
-          <p className="text-[15px] md:text-[16px] text-[#1C3557]/60 max-w-2xl mx-auto font-sans leading-relaxed italic">
-            Enter your date of birth to decode the numerical algorithms governing your destiny and internal frequency.
-          </p>
         </div>
 
         <div className="max-w-md mx-auto space-y-8">

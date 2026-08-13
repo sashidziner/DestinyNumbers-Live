@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface AuraLayer {
   name: string;
@@ -33,6 +34,11 @@ interface ClearingTool {
 }
 
 export default function AuraCleansing() {
+  useSEO({
+    title: 'Aura Cleansing | Clear Negative Energy & Restore Balance',
+    description: 'Aura cleansing sessions to release stagnant, negative energy and restore your natural glow, focus and vitality.',
+    keywords: 'aura cleansing, aura healing, energy cleansing, negative energy removal, aura reading bangalore, etheric layer',
+  });
   const auraSectionRef = useRef<HTMLDivElement>(null);
 
   const auraLayers: AuraLayer[] = [

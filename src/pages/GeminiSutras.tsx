@@ -9,8 +9,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function GeminiSutras() {
+  useSEO({
+    title: 'Gemini Sutras | Timeless Astrological Insights',
+    description: 'Discover the Gemini Sutras — a curated selection of Vedic astrological wisdom, atma karaka insights and karmic guidance from Destiny Numbers.',
+    keywords: 'gemini sutras, atma karaka, astrological insights, vedic sutras, destiny numbers wisdom, karmic astrology',
+  });
   const scienceCards = [
     {
       title: "Atma Karaka — The Soul Planet",

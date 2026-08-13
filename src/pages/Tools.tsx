@@ -7,6 +7,7 @@ import { NameNumerologyCalculator } from '../components/NameNumerologyCalculator
 import PythagoreanCalculator from '../components/PythagoreanCalculator';
 import { EntrancesVastuCalculator } from '../components/EntrancesVastuCalculator';
 import { PersonalYearCalculator } from '../components/PersonalYearCalculator';
+import { useSEO } from '../lib/useSEO';
 
 const tools = [
   { 
@@ -70,6 +71,11 @@ const tools = [
 ];
 
 export default function ToolsPage() {
+  useSEO({
+    title: 'Free Numerology Tools | Destiny Numbers',
+    description: 'Free numerology tools — name number calculator, mobile analyser, compatibility checker, personal year roadmap and brand auditor. Discover your numbers instantly.',
+    keywords: 'free numerology tools, name number calculator, mobile number analyser, numerology compatibility, brand numerology, personal year calculator',
+  });
   const location = useLocation();
   const navigate = useNavigate();
   const [activeTool, setActiveTool] = useState<string | null>(null);

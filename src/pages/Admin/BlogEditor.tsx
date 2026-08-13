@@ -16,8 +16,14 @@ import {
 import { cn } from '../../lib/utils';
 import RichTextEditor from '../../components/Admin/RichTextEditor';
 import { StandardInput, StandardTextArea, StandardSelect } from '../../components/StandardFormFields';
+import { useSEO } from '../../lib/useSEO';
 
 export default function BlogEditor() {
+  useSEO({
+    title: 'Blog Editor | Destiny Numbers Admin',
+    description: 'Create and edit blog posts for the Destiny Numbers CMS.',
+    keywords: 'destiny numbers blog editor, cms editor',
+  });
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { user, isAdmin, loading: authLoading } = useAuth();
@@ -274,7 +280,7 @@ export default function BlogEditor() {
                   value={post.title}
                   onChange={e => setPost({...post, title: e.target.value})}
                   placeholder="Enter Title of Wisdom..."
-                  className="w-full h-auto bg-white border border-[#E0D5C0] rounded-[6px] p-6 text-4xl font-display italic text-[#C9A84C] outline-none focus:border-[#C9A84C] transition-all placeholder:text-[#C9A84C]/10"
+                  className="w-full h-auto bg-white border border-[#E0D5C0] rounded-[6px] p-6 text-4xl font-display italic text-[#C9A84C] outline-none focus:border-[#C9A84C] transition-all placeholder:text-[#474747]"
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -284,7 +290,7 @@ export default function BlogEditor() {
                   onChange={e => setPost({...post, excerpt: e.target.value})}
                   placeholder="Brief synthesis for the seeker..."
                   rows={2}
-                  className="w-full bg-white border border-[#E0D5C0] rounded-[6px] p-6 text-xl font-light text-mystic-navy italic outline-none focus:border-[#C9A84C] transition-all placeholder:text-mystic-navy/20"
+                  className="w-full bg-white border border-[#E0D5C0] rounded-[6px] p-6 text-xl font-light text-mystic-navy italic outline-none focus:border-[#C9A84C] transition-all placeholder:text-[#474747]"
                 />
               </div>
             </div>

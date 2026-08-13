@@ -5,8 +5,14 @@ import { useState, useMemo } from 'react';
 import { cn, formatImageUrl } from '../lib/utils';
 import { BRAND_DATA } from '../lib/constants';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function BlogListing() {
+  useSEO({
+    title: 'Blog | Numerology, Vastu & Astrology Insights',
+    description: 'Read the Destiny Numbers blog — practical guidance on numerology, Vastu, astrology, tarot and spiritual living by Dr. Arun Poovaiah.',
+    keywords: 'numerology blog, vastu articles, astrology insights, tarot blog, dr arun poovaiah blog, spiritual articles',
+  });
   const { posts, loading } = useCMS();
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');

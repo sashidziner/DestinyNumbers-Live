@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   AlertCircle,
   ArrowRight,
-  ArrowLeft,
   RefreshCw,
   TrendingUp,
   Target,
@@ -30,8 +29,14 @@ import {
 } from "../services/mobileAnalysisService";
 import { generateNumerologyReport } from "../services/numerologyReportService";
 import ReactMarkdown from "react-markdown";
+import { useSEO } from "../lib/useSEO";
 
 export default function MobileAnalyser() {
+  useSEO({
+    title: 'Free Mobile Number Analyser | Numerology Analysis',
+    description: 'Analyse any mobile number for its numerological energy. Free tool by Destiny Numbers — instant results with insights for career, wealth and relationships.',
+    keywords: 'mobile number analyser, free mobile numerology, phone number checker, lucky number analysis, mobile numerology tool',
+  });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [dob, setDob] = useState("");
@@ -120,27 +125,6 @@ export default function MobileAnalyser() {
             ></div>
           </div>
 
-          <div className="flex flex-col items-center gap-4">
-            <p className="text-[#1C3557]/70 max-w-2xl mx-auto leading-relaxed font-normal italic text-[15px] md:text-[16px] mb-4">
-              Scientific Vedic Numerology analysis for your digital vibration.
-              Determine if your mobile numbers are enhancing your destiny or
-              creating interference.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Link
-                to="/tools"
-                className="px-8 py-4 bg-white border border-[#1C3557]/10 text-[#1C3557] font-display font-black tracking-widest text-[11px] uppercase hover:bg-[#1C3557] hover:text-white transition-all flex items-center justify-center gap-3"
-              >
-                Back to Tools <ArrowLeft className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-          <Link
-            to="/mobile-numerology"
-            className="inline-flex items-center gap-2 text-[#C9A84C] text-[11px] font-black tracking-widest hover:underline uppercase"
-          >
-            Read Mobile Numerology Guide <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12">

@@ -10,8 +10,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function Vastu() {
+  useSEO({
+    title: 'Vastu Consultation | Traditional Vastu Shastra for Home & Business',
+    description: 'Expert Vastu Shastra consultations for homes, offices and land — attract prosperity, harmony and peace with guidance from Dr. Arun Poovaiah.',
+    keywords: 'vastu consultation, vastu shastra, home vastu, office vastu, vastu consultant bangalore, dr arun poovaiah vastu, vastu for house',
+  });
   const roomPlacements = [
     {
       title: "Main Entrance",

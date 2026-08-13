@@ -3,8 +3,14 @@ import { SERVICE_CATEGORIES, SERVICES } from '../lib/constants';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function ServicesPage() {
+  useSEO({
+    title: 'Our Services | Numerology, Vastu, Tarot & Astrology Consultations',
+    description: 'Complete list of services from Destiny Numbers: numerology, Vastu consultations, Nadi astrology, tarot readings, Reiki, gemstone guidance and more.',
+    keywords: 'numerology services, vastu consultation, tarot reading, nadi astrology services, reiki bangalore, spiritual guidance',
+  });
   const navigate = useNavigate();
   return (
     <div className="bg-[#F5ECD7] min-h-screen">

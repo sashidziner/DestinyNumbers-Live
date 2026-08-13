@@ -18,6 +18,7 @@ import {
   DollarSign,
   Briefcase
 } from 'lucide-react';
+import { useSEO } from '../lib/useSEO';
 import { cn } from '../lib/utils';
 import { StandardInput, StandardNameInput, StandardDateInput, StandardMobileInput, StandardSelect, StandardTextArea } from '../components/StandardFormFields';
 import { 
@@ -52,6 +53,11 @@ const STEPS = [
 ];
 
 export default function BrandAuditor() {
+  useSEO({
+    title: 'Brand Numerology Auditor | Free Brand Name Analysis',
+    description: 'Audit your brand name with numerology. Free tool to reveal your brand\'s numeric strength, market fit and areas to boost visibility and revenue.',
+    keywords: 'brand numerology auditor, brand name analysis, business name audit, brand naming numerology, free brand audit, marketing numerology',
+  });
   const [step, setStep] = useState(0);
   const [data, setData] = useState<BrandData>({
     brandName: '',
@@ -369,14 +375,6 @@ export default function BrandAuditor() {
             <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
           </div>
           
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-[15px] md:text-[16px] text-[#1C3557]/80 max-w-2xl mx-auto font-normal italic leading-relaxed"
-          >
-            A futuristic luxury intelligence system designed to evaluate your business vibration through ancient algorithms and modern brand logic.
-          </motion.p>
         </div>
 
         {/* Progress Tracker */}

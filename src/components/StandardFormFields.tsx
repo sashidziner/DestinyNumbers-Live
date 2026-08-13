@@ -83,7 +83,7 @@ export const StandardInput: React.FC<FormFieldProps> = ({
           disabled={disabled}
           placeholder={placeholder}
           className={cn(
-            "w-full h-[52px] bg-white border border-[#E0D5C0] rounded-none text-[16px] text-mystic-navy outline-none transition-all placeholder:text-mystic-navy/20",
+            "w-full h-[52px] bg-white border border-[#E0D5C0] rounded-none text-[16px] text-mystic-navy outline-none transition-all placeholder:text-[#474747]",
             icon ? "pl-12" : "px-4",
             "pr-4",
             "focus:border-[#C9A84C]",
@@ -300,7 +300,7 @@ export const StandardDateInput: React.FC<FormFieldProps> = ({
             color: '#1C3557',
             letterSpacing: '2px',
           }}
-          className={inputClassName}
+          className={cn("placeholder:text-[#474747]", inputClassName)}
         />
         <input
           ref={hiddenInputRef}
@@ -351,7 +351,7 @@ export const StandardTextArea: React.FC<FormFieldProps & { rows?: number }> = ({
         placeholder={placeholder}
         rows={rows}
         className={cn(
-          "w-full bg-white border border-[#E0D5C0] rounded-none p-4 text-[16px] text-mystic-navy outline-none transition-all placeholder:text-mystic-navy/20",
+          "w-full bg-white border border-[#E0D5C0] rounded-none p-4 text-[16px] text-mystic-navy outline-none transition-all placeholder:text-[#474747]",
           "focus:border-[#C9A84C]",
           error && isTouched && "border-[#E8420E]",
           !error && isTouched && value && "border-[#1D9E75]",

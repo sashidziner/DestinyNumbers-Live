@@ -13,8 +13,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function WristWatchAnalysis() {
+  useSEO({
+    title: 'Wrist Watch Analysis | Numerology of the Time You Wear',
+    description: 'Discover how your wrist watch influences your energy and destiny. Personal wrist watch consultation grounded in numerology by Dr. Arun Poovaiah.',
+    keywords: 'wrist watch numerology, watch analysis, lucky watch, numerology accessories, destiny numbers watch, timepiece numerology',
+  });
   const points = [
     'Hidden patterns in your subconscious mind',
     'Your true strengths, confidence levels, and areas of resistance',

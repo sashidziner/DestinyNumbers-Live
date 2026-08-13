@@ -2,8 +2,14 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { LegalPageLayout } from '../components/LegalPageLayout';
+import { useSEO } from '../lib/useSEO';
 
 export default function TermsConditions() {
+  useSEO({
+    title: 'Terms & Conditions | Destiny Numbers',
+    description: 'The terms and conditions governing use of the Destiny Numbers website, consultations and services.',
+    keywords: 'destiny numbers terms conditions, terms of use, service agreement',
+  });
   return (
     <LegalPageLayout 
       title="Terms & Conditions" 

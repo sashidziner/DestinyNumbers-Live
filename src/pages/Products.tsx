@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { BRAND_DATA } from '../lib/constants';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface CartItem {
   product: Product;
@@ -87,6 +88,11 @@ const PRODUCT_GALLERY_EXTRAS: Record<string, string[]> = {
 };
 
 export default function Products() {
+  useSEO({
+    title: 'Numerology & Spiritual Products | Destiny Numbers Store',
+    description: 'Shop curated spiritual and numerology-aligned products: yantras, crystals, bracelets and Vastu items, chosen for your energy by Dr. Arun Poovaiah.',
+    keywords: 'numerology products, yantras online, crystals, vastu products, spiritual store bangalore, destiny numbers store, gemstone bracelets',
+  });
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState<string>(() => {
     const params = new URLSearchParams(window.location.search);

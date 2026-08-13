@@ -13,8 +13,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function SignatureAnalysis() {
+  useSEO({
+    title: 'Signature Analysis | Grapho-Numerology by Dr. Arun Poovaiah',
+    description: 'Signature analysis rooted in graphology and numerology. Refine your signature to project confidence, success and financial growth.',
+    keywords: 'signature analysis, graphology signature, numerology signature, signature correction, lucky signature design, signature reading',
+  });
   const shifts = [
     {
       title: 'A renewed sense of confidence and personal authority',

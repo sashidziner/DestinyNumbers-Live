@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, Binary, ChevronRight, RefreshCw, Smartphone, BookOpen, MessageSquare, PhoneCall, ArrowRight, Info, ArrowLeft } from 'lucide-react';
+import { Sparkles, Binary, ChevronRight, RefreshCw, Smartphone, BookOpen, MessageSquare, PhoneCall, ArrowRight, Info } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { SOCIAL_LINKS } from '../lib/constants';
 
@@ -116,7 +116,7 @@ export function NameNumerologyCalculator({ onBack }: { onBack?: () => void }) {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 pt-1 pb-16">
+    <div className="w-full max-w-5xl mx-auto px-4 pt-12 pb-16">
       {/* Hero Section */}
       <div className="text-center mb-10">
         <div className="mb-4">
@@ -134,19 +134,6 @@ export function NameNumerologyCalculator({ onBack }: { onBack?: () => void }) {
           </h2>
           <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
         </div>
-        <p className="text-[15px] md:text-[16px] text-[#1C3557]/60 max-w-2xl mx-auto font-sans leading-relaxed italic mb-6">
-          Your name's frequency influences your career, wealth, and destiny. Decode the vibrational energy of your identity using the precise Chaldean frequency matrix.
-        </p>
-        {onBack && (
-          <div className="flex justify-center mt-6">
-            <button 
-              onClick={onBack}
-              className="px-8 py-4 bg-white border border-[#1C3557]/10 text-[#1C3557] font-display font-black tracking-widest text-[11px] uppercase hover:bg-[#1C3557] hover:text-white transition-all flex items-center justify-center gap-3 cursor-pointer shadow-sm relative z-10"
-            >
-              Back to Tools <ArrowLeft className="w-4 h-4" />
-            </button>
-          </div>
-        )}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -168,7 +155,7 @@ export function NameNumerologyCalculator({ onBack }: { onBack?: () => void }) {
                         value={name}
                         onChange={(e) => setName(e.target.value.replace(/[0-9]/g, ''))}
                         placeholder="Legal Name..."
-                        className="w-full bg-white border border-royal-gold/20 rounded-xl px-6 py-4 text-black font-display text-lg tracking-widest focus:border-royal-gold outline-none transition-all placeholder:text-gray-300"
+                        className="w-full bg-white border border-royal-gold/20 rounded-xl px-6 py-4 text-black font-display text-lg tracking-widest focus:border-royal-gold outline-none transition-all placeholder:text-[#474747]"
                       />
                    </div>
                    <div>

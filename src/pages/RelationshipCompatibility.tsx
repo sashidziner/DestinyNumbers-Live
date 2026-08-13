@@ -8,8 +8,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function RelationshipCompatibility() {
+  useSEO({
+    title: 'Relationship Compatibility Reading | Numerology & Astrology',
+    description: 'In-depth relationship compatibility reading combining numerology and Vedic astrology. Understand each other\'s needs and strengthen your bond.',
+    keywords: 'relationship compatibility, love compatibility, numerology relationship, astrology love match, destiny numbers relationship, couple reading',
+  });
   const layers = [
     {
       num: "01",

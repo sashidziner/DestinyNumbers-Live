@@ -12,8 +12,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function VastuCorrections() {
+  useSEO({
+    title: 'Vastu Corrections | Fix Vastu Doshas Without Demolition',
+    description: 'Practical Vastu corrections and remedies to fix Vastu doshas in existing structures — no demolition needed. Personalised guidance by Dr. Arun Poovaiah.',
+    keywords: 'vastu corrections, vastu remedies, vastu dosha correction, non demolition vastu, vastu shifts bangalore, vastu without breaking',
+  });
   const commonDefects = [
     { defect: "Northeast cut or toilet", consequence: "Financial drain, health issues, mental stress" },
     { defect: "Kitchen in Northeast", consequence: "Wealth loss, family conflict, poor digestion" },

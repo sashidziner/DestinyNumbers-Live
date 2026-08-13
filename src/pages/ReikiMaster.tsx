@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface ReikiLayer {
   layer: string;
@@ -23,6 +24,11 @@ interface DashaPlanet {
 }
 
 export default function ReikiMaster() {
+  useSEO({
+    title: 'Reiki Master Consultation | Universal Life Energy Healing',
+    description: 'Reiki healing sessions with a certified master — release blocks, restore balance and welcome universal life energy into your body and life.',
+    keywords: 'reiki master, reiki healing bangalore, reiki sessions, universal energy healing, usui reiki, energy healer',
+  });
   const howItWorksRef = useRef<HTMLDivElement>(null);
 
   const reikiLayers: ReikiLayer[] = [

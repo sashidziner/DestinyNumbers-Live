@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+import { useSEO } from '../lib/useSEO';
 import { 
   Check, 
   Star, 
@@ -120,6 +121,11 @@ const PLANS: Plan[] = [
 ];
 
 export function ConsultationPlans() {
+  useSEO({
+    title: 'Consultation Plans | Book Numerology & Vastu Sessions',
+    description: 'Choose the right consultation plan with Dr. Arun Poovaiah — one-time, comprehensive and premium packages for numerology, Vastu and astrology guidance.',
+    keywords: 'numerology consultation, vastu consultation packages, astrology consultation plans, book destiny numbers session, consultation pricing',
+  });
   const { data } = useCMS();
   const [searchParams] = useSearchParams();
   const PLANS = data.pricing;
@@ -212,7 +218,7 @@ export function ConsultationPlans() {
           className="max-w-4xl mx-auto relative z-10 w-full -mt-2"
         >
           <div className="mb-2">
-            <h2 style={{
+            <h1 style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '26px',
               fontWeight: 400,
@@ -223,7 +229,7 @@ export function ConsultationPlans() {
               textAlign: 'center'
             }}>
               Choose Your Path <span style={{ color: '#C9A84C' }}>to Clarity</span>
-            </h2>
+            </h1>
             <div style={{ width: '50px', height: '1px', background: '#C9A84C', margin: '2px auto 0' }}></div>
           </div>
           
@@ -344,8 +350,25 @@ export function ConsultationPlans() {
         </div>
       </section>
 
+      {/* Explore Services */}
+      <section className="max-w-5xl mx-auto px-6 mt-24 relative z-10 text-center">
+        <h2 className="text-2xl md:text-3xl font-display italic text-[#0d1b3e] mb-6">Explore related services</h2>
+        <p className="text-[#0d1b3e]/70 text-sm italic mb-8 max-w-2xl mx-auto">
+          Not sure which plan suits you? Browse our specialty consultations first.
+        </p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link to="/services/numerology" className="px-5 py-2 border border-[#0d1b3e]/20 text-[#0d1b3e] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Numerology</Link>
+          <Link to="/services/vastu" className="px-5 py-2 border border-[#0d1b3e]/20 text-[#0d1b3e] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Vastu</Link>
+          <Link to="/services/horoscope" className="px-5 py-2 border border-[#0d1b3e]/20 text-[#0d1b3e] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Horoscope</Link>
+          <Link to="/services/name-correction" className="px-5 py-2 border border-[#0d1b3e]/20 text-[#0d1b3e] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Name Correction</Link>
+          <Link to="/services/business-name-numerology" className="px-5 py-2 border border-[#0d1b3e]/20 text-[#0d1b3e] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Business Numerology</Link>
+          <Link to="/tools" className="px-5 py-2 border border-[#0d1b3e]/20 text-[#0d1b3e] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Free Tools</Link>
+          <Link to="/services" className="px-5 py-2 bg-[#0d1b3e] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] transition-all">All Services →</Link>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section className="max-w-4xl mx-auto px-6 mt-32 relative z-10">
+      <section className="max-w-4xl mx-auto px-6 mt-24 relative z-10">
         <h2 className="text-4xl font-display text-center mb-16 italic text-[#0d1b3e]">Common Clarifications</h2>
         <div className="space-y-6">
           {[

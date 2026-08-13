@@ -15,8 +15,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function NameCorrection() {
+  useSEO({
+    title: 'Name Correction by Numerology | Change Your Destiny',
+    description: 'Personal name correction based on numerology — align your name\'s vibration with your date of birth and destiny path. Expert guidance by Dr. Arun Poovaiah.',
+    keywords: 'name correction numerology, lucky name change, numerological name correction, spelling correction, name change destiny numbers',
+  });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {

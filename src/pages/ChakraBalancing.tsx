@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface Chakra {
   name: string;
@@ -22,6 +23,11 @@ interface Chakra {
 }
 
 export default function ChakraBalancing() {
+  useSEO({
+    title: 'Chakra Balancing | Restore Energy & Well-Being',
+    description: 'Chakra balancing sessions to restore your body\'s seven energy centres. Feel grounded, clear and connected through personalised energy healing.',
+    keywords: 'chakra balancing, chakra healing, energy healing bangalore, seven chakras alignment, spiritual healing, muladhara sahasrara',
+  });
   const chakrasSectionRef = useRef<HTMLDivElement>(null);
 
   const chakras: Chakra[] = [

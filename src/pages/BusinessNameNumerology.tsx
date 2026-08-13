@@ -16,8 +16,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function BusinessNameNumerology() {
+  useSEO({
+    title: 'Business Name Numerology | Lucky Name for Your Company',
+    description: 'Pick a lucky, vibrant business name aligned to numerology. Dr. Arun Poovaiah helps brands choose names that attract growth, wealth and stability.',
+    keywords: 'business name numerology, lucky business name, company name numerology, brand numerology, business name correction, startup name',
+  });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {

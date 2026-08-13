@@ -20,8 +20,14 @@ import {
 import { Link } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function MobileNumerologyLanding() {
+  useSEO({
+    title: 'Mobile Number Numerology | Find Your Lucky Number',
+    description: 'Discover the power of your mobile number. Get a free numerology analysis of your phone number and see if it supports your growth, wealth and success.',
+    keywords: 'mobile number numerology, lucky mobile number, phone number analysis, mobile numerology calculator, mobile number check',
+  });
   const calculationSteps = [
     {
       id: 1,

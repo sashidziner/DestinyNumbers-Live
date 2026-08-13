@@ -16,8 +16,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function Tarot() {
+  useSEO({
+    title: 'Tarot Reading Consultation | Personal & Deep Insights',
+    description: 'Professional tarot readings by Dr. Arun Poovaiah — clarity on love, career, finances and life direction with the wisdom of the tarot.',
+    keywords: 'tarot reading, tarot consultation bangalore, love tarot, career tarot, dr arun poovaiah tarot, professional tarot reader',
+  });
   const benefits = [
     { title: 'Clarity in confusion', desc: "Get clear answers when you're feeling lost in life's complex transitions.", icon: Eye },
     { title: 'Love & relationships', desc: 'Understand emotions, timing, and deep soul connections with clarity.', icon: Heart },

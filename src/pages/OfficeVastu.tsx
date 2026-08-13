@@ -11,8 +11,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function OfficeVastu() {
+  useSEO({
+    title: 'Office Vastu Consultation | Vastu for Workplace Success',
+    description: 'Office Vastu guidance to boost productivity, teamwork and profits. Analyse and correct your workplace layout for optimal energy flow.',
+    keywords: 'office vastu, workplace vastu, cabin vastu, vastu for office layout, office vastu bangalore, workspace vastu',
+  });
   const entrancePoints = [
     "All four directions — North, South, East, West — can be auspicious for an office entrance",
     "What matters is not the direction but the exact pada (position) within that direction"

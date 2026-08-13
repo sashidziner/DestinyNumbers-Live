@@ -10,8 +10,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function CommercialVastu() {
+  useSEO({
+    title: 'Commercial Vastu Consultation | Shops, Showrooms & Retail',
+    description: 'Commercial Vastu consultation for shops, showrooms, restaurants and retail spaces. Attract customers and boost turnover with the right layout.',
+    keywords: 'commercial vastu, shop vastu, showroom vastu, retail vastu, restaurant vastu bangalore, business vastu',
+  });
   const customBenefits = [
     "Customers walk in more freely",
     "Employees work with greater focus and less conflict",

@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface CrystalRow {
   crystal: string;
@@ -19,6 +20,11 @@ interface CrystalRow {
 }
 
 export default function CrystalReiki() {
+  useSEO({
+    title: 'Crystal Reiki Healing | Reiki Amplified With Sacred Crystals',
+    description: 'Crystal reiki blends reiki energy with the healing frequencies of sacred crystals for a deeper, more targeted healing experience.',
+    keywords: 'crystal reiki, crystal healing, reiki with crystals, chakra crystal healing, gemstone reiki, crystal energy therapy',
+  });
   const howItWorksRef = useRef<HTMLDivElement>(null);
 
   const crystalRows: CrystalRow[] = [

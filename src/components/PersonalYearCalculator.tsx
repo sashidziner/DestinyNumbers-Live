@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, Calendar, ArrowLeft, ArrowRight, RefreshCw, Star, Info, Shield, Compass, BookOpen } from 'lucide-react';
+import { Sparkles, Calendar, ArrowRight, RefreshCw, Star, Info, Shield, Compass, BookOpen } from 'lucide-react';
 
 interface PersonalYearResult {
   birthDay: number;
@@ -257,7 +257,7 @@ export function PersonalYearCalculator({ onBack }: { onBack?: () => void }) {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 pt-4 pb-16">
+    <div className="w-full max-w-5xl mx-auto px-4 pt-12 pb-16">
       {/* Headings */}
       <div className="text-center mb-10">
         <div className="mb-4">
@@ -275,20 +275,6 @@ export function PersonalYearCalculator({ onBack }: { onBack?: () => void }) {
           </h2>
           <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
         </div>
-        <p className="text-[15px] md:text-[16px] text-[#1C3557]/60 max-w-2xl mx-auto font-sans leading-relaxed italic mb-6">
-          Every year carries a specific planetary and mathematical vibration that determines either smooth pathways or learning hurdles. Find out where you stand right now.
-        </p>
-        
-        {onBack && (
-          <div className="flex justify-center mt-6">
-            <button 
-              onClick={onBack}
-              className="px-8 py-4 bg-white border border-[#1C3557]/10 text-[#1C3557] font-display font-black tracking-widest text-[11px] uppercase hover:bg-[#1C3557] hover:text-white transition-all flex items-center justify-center gap-3 cursor-pointer shadow-sm relative z-10"
-            >
-              Back to Tools <ArrowLeft className="w-4 h-4" />
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Calculator Card */}

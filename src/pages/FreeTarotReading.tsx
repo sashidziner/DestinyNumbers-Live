@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../lib/useSEO';
 
 // --- DATASET: 22 MAJOR ARCANA (ELLIOT ORACLE) ---
 interface TarotCard {
@@ -248,6 +249,11 @@ interface Particle {
 }
 
 export default function FreeTarotReading() {
+  useSEO({
+    title: 'Free Tarot Reading Online | Instant Yes/No Card Draw',
+    description: 'Draw a Major Arcana card and receive an instant, free tarot reading online. Explore love, career and life questions with the Destiny Numbers tarot tool.',
+    keywords: 'free tarot reading, online tarot, instant tarot draw, yes no tarot, love tarot free, career tarot online, rider waite tarot',
+  });
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particleCanvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -593,7 +599,7 @@ export default function FreeTarotReading() {
                   placeholder="Write your question"
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
-                  className="w-full bg-white border border-[#c8a84b]/40 rounded-lg py-1.5 px-4 text-[#1C3557] placeholder:text-[#1C3557]/50 font-display italic text-center text-[12px] focus:outline-none focus:ring-1 focus:ring-[#c8a84b] transition-all shadow-sm"
+                  className="w-full bg-white border border-[#c8a84b]/40 rounded-lg py-1.5 px-4 text-[#1C3557] placeholder:text-[#474747] font-display italic text-center text-[12px] focus:outline-none focus:ring-1 focus:ring-[#c8a84b] transition-all shadow-sm"
                />
             </div>
 

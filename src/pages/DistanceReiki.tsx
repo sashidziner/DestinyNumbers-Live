@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface ReikiLayer {
   layer: string;
@@ -21,6 +22,11 @@ interface Step {
 }
 
 export default function DistanceReiki() {
+  useSEO({
+    title: 'Distance Reiki Healing | Sessions Anywhere in the World',
+    description: 'Distance reiki healing — receive the benefits of reiki wherever you are. Book a personalised remote healing session with Destiny Numbers.',
+    keywords: 'distance reiki, remote reiki, online reiki healing, distance energy healing, reiki session online, remote healer',
+  });
   const howItWorksRef = useRef<HTMLDivElement>(null);
 
   const reikiLayers: ReikiLayer[] = [

@@ -1,8 +1,15 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Shield, Zap, Sparkles } from 'lucide-react';
 import { useCMS } from '../context/CMSContext';
+import { useSEO } from '../lib/useSEO';
 
 export default function AboutPage() {
+  useSEO({
+    title: 'About Dr. Arun Poovaiah | Numerologist, Vastu & Nadi Astrologer',
+    description: 'Meet Dr. Arun Poovaiah — Bangalore-based numerologist, Vastu consultant and Nadi astrologer guiding clients on career, business and personal destiny.',
+    keywords: 'about dr arun poovaiah, bangalore numerologist, nadi astrologer, vastu expert, destiny numbers founder',
+  });
   const { data, loading } = useCMS();
   const { bio } = data;
 
@@ -135,6 +142,18 @@ export default function AboutPage() {
             <p>
               Today, Arun works with international clients ranging from celebrity entrepreneurs to established family businesses, helping them "retune" their brand and personal frequencies for maximum resonance.
             </p>
+          </div>
+
+          <div className="mt-16 pt-10 border-t border-warm-border text-center">
+            <p className="text-xs font-bold text-warm-text-muted uppercase tracking-widest mb-6">Continue Your Journey</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/services" className="px-6 py-3 border border-warm-border text-warm-text-primary text-xs font-bold tracking-widest uppercase hover:bg-warm-accent hover:text-white hover:border-transparent transition-all">All Services</Link>
+              <Link to="/services/numerology" className="px-6 py-3 border border-warm-border text-warm-text-primary text-xs font-bold tracking-widest uppercase hover:bg-warm-accent hover:text-white hover:border-transparent transition-all">Numerology</Link>
+              <Link to="/services/vastu" className="px-6 py-3 border border-warm-border text-warm-text-primary text-xs font-bold tracking-widest uppercase hover:bg-warm-accent hover:text-white hover:border-transparent transition-all">Vastu</Link>
+              <Link to="/services/horoscope" className="px-6 py-3 border border-warm-border text-warm-text-primary text-xs font-bold tracking-widest uppercase hover:bg-warm-accent hover:text-white hover:border-transparent transition-all">Astrology</Link>
+              <Link to="/consultation" className="px-6 py-3 bg-warm-accent text-white text-xs font-bold tracking-widest uppercase hover:bg-warm-accent-hover transition-all">Book a Consultation</Link>
+              <Link to="/contact" className="px-6 py-3 border border-warm-border text-warm-text-primary text-xs font-bold tracking-widest uppercase hover:bg-warm-accent hover:text-white hover:border-transparent transition-all">Contact</Link>
+            </div>
           </div>
         </div>
       </section>

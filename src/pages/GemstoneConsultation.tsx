@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 interface Gemstone {
   name: string;
@@ -17,6 +18,11 @@ interface Gemstone {
 }
 
 export default function GemstoneConsultation() {
+  useSEO({
+    title: 'Gemstone Consultation | Choose the Right Stone for You',
+    description: 'Personalised gemstone recommendations based on your Vedic chart and numerology. Wear the right ratna for health, wealth and harmony.',
+    keywords: 'gemstone consultation, ratna recommendation, vedic gemstones, birth chart gemstones, dr arun poovaiah gemstone, ruby pearl coral',
+  });
   const gemstoneGuide: Gemstone[] = [
     { name: 'Ruby', planet: 'Sun', wearOnlyWhen: 'Sun is strong, active Dasha, not 6/8/12 lord', color: 'bg-red-500' },
     { name: 'Pearl', planet: 'Moon', wearOnlyWhen: 'Moon is benefic for your Lagna, active period', color: 'bg-slate-100 border border-slate-300' },

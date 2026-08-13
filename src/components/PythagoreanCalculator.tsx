@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, Heart, User, Search, RefreshCw, MessageSquare, PhoneCall, ChevronRight, ArrowLeft } from 'lucide-react';
+import { Sparkles, Heart, User, Search, RefreshCw, MessageSquare, PhoneCall, ChevronRight } from 'lucide-react';
 
 const PYTHAGOREAN_CHART: Record<string, number> = {
   'A': 1, 'J': 1, 'S': 1,
@@ -135,19 +135,6 @@ export default function PythagoreanCalculator({ onBack }: { onBack?: () => void 
           </h2>
           <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
         </div>
-        <p className="text-[14px] md:text-[15px] text-[#1C3557]/70 max-w-xl mx-auto font-sans leading-relaxed italic mb-4">
-          Discover your expression, heart desire, and personality numbers using the ancient Pythagorean vibrational system.
-        </p>
-        {onBack && (
-          <div className="flex justify-center mt-6">
-            <button 
-              onClick={onBack}
-              className="px-8 py-4 bg-white border border-[#1C3557]/10 text-[#1C3557] font-display font-black tracking-widest text-[11px] uppercase hover:bg-[#1C3557] hover:text-white transition-all flex items-center justify-center gap-3 cursor-pointer shadow-sm relative z-10"
-            >
-              Back to Tools <ArrowLeft className="w-4 h-4" />
-            </button>
-          </div>
-        )}
       </div>
 
       {/* SECTION 2: Calculator Card */}
@@ -174,7 +161,7 @@ export default function PythagoreanCalculator({ onBack }: { onBack?: () => void 
                   }
                 }}
                 placeholder="First, second/ full name"
-                className="w-full bg-white border border-[#C9A84C]/30 hover:border-[#C9A84C]/50 rounded-none py-1.5 px-3 md:py-2 md:px-4 text-black font-sans text-sm md:text-base tracking-wider focus:border-[#C9A84C] outline-none transition-all placeholder:text-gray-400 text-center"
+                className="w-full bg-white border border-[#C9A84C]/30 hover:border-[#C9A84C]/50 rounded-none py-1.5 px-3 md:py-2 md:px-4 text-black font-sans text-sm md:text-base tracking-wider focus:border-[#C9A84C] outline-none transition-all placeholder:text-[#474747] text-center"
                 onKeyPress={(e) => e.key === 'Enter' && calculateResults()}
               />
               {error && (

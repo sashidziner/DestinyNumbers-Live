@@ -7,6 +7,7 @@ import { ArrowLeft, Facebook, Twitter, Linkedin, Sparkles } from 'lucide-react';
 import { formatImageUrl, cn } from '../lib/utils'; import { imgUrl } from '../lib/utils';
 import { INITIAL_BLOG_POSTS } from '../lib/initialArticles';
 import { EntrancesVastuCalculator } from '../components/EntrancesVastuCalculator';
+import { useSEO } from '../lib/useSEO';
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -17,6 +18,12 @@ export default function BlogPostPage() {
   const [settings, setSettings] = useState<BlogSettings | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  useSEO({
+    title: post ? `${post.title} | Destiny Numbers Blog` : 'Blog Post | Destiny Numbers',
+    description: post?.excerpt || 'Insights on numerology, Vastu, astrology and spiritual growth from Destiny Numbers by Dr. Arun Poovaiah.',
+    keywords: post ? `${post.category || 'numerology'}, ${post.title}, destiny numbers blog, dr arun poovaiah` : 'numerology blog, destiny numbers article, dr arun poovaiah blog',
+  });
 
   useEffect(() => {
     const fetchData = async () => {

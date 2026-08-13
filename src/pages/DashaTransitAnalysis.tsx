@@ -18,8 +18,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function DashaTransitAnalysis() {
+  useSEO({
+    title: 'Dasha & Transit Analysis | Timing of Life Events',
+    description: 'Vedic dasha and planetary transit analysis to time career, marriage, finance and health events. Personal guidance by Dr. Arun Poovaiah.',
+    keywords: 'dasha analysis, transit analysis, mahadasha antardasha, vedic transits, planetary timing, jyotish predictions, gochar',
+  });
   const dashaLevels = [
     { name: 'Mahadasha', desc: 'Major period ruling several years.' },
     { name: 'Antardasha', desc: 'Sub-period within the Mahadasha.' },

@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Trash2, Plus, MapPin, X, Home, ShoppingBag, ArrowLeft, CreditCard } from 'lucide-react';
 import { BRAND_DATA } from '../lib/constants';
+import { useSEO } from '../lib/useSEO';
 
 const RAZORPAY_KEY = 'rzp_live_Yu7vn36pcctsMV'; // Replace with your Razorpay Key ID
 
@@ -23,6 +24,11 @@ interface DeliveryAddress {
 const CART_KEY = 'destiny_products_cart';
 
 export default function Checkout() {
+  useSEO({
+    title: 'Checkout | Destiny Numbers',
+    description: 'Complete your purchase securely at Destiny Numbers by Dr. Arun Poovaiah.',
+    keywords: 'destiny numbers checkout, secure checkout, order confirmation',
+  });
   const navigate = useNavigate();
   const [cart, setCart] = useState<CartItem[]>([]);
   const [deliveryAddresses, setDeliveryAddresses] = useState<DeliveryAddress[]>([]);

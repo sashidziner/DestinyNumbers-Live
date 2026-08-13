@@ -3,8 +3,14 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShieldCheck, ArrowLeft, Loader2, ShieldAlert, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useSEO } from '../../lib/useSEO';
 
 export default function AdminLogin() {
+  useSEO({
+    title: 'Admin Login | Destiny Numbers',
+    description: 'Admin login for the Destiny Numbers CMS. Authorised users only.',
+    keywords: 'admin login destiny numbers, cms login',
+  });
   const { user, isAdmin, signIn, loading } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

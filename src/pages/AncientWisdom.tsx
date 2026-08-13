@@ -16,8 +16,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function AncientWisdom() {
+  useSEO({
+    title: 'Ancient Wisdom | Nadi Astrology & Sacred Vedic Sciences',
+    description: 'Explore ancient wisdom — Nadi astrology, Vedic sciences and timeless spiritual guidance for the modern seeker with Dr. Arun Poovaiah.',
+    keywords: 'nadi astrology, ancient wisdom, vedic sciences, sacred knowledge, spiritual guidance bangalore, palm leaf astrology',
+  });
   const systems = [
     {
       title: 'Maharishi Parashara',

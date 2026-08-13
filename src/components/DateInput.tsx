@@ -117,7 +117,7 @@ export function DateInput({
           onChange={handleTextChange}
           placeholder={placeholder}
           className={cn(
-            "w-full bg-white border-2 rounded-none p-8 md:p-10 pl-24 text-mystic-navy font-display text-[16pt] md:text-[20pt] tracking-[0.2em] outline-none transition-all placeholder:text-mystic-navy/20 font-black",
+            "w-full bg-white border-2 rounded-none p-8 md:p-10 pl-24 text-mystic-navy font-display text-[16pt] md:text-[20pt] tracking-[0.2em] outline-none transition-all placeholder:text-[#474747] font-black",
             validationError ? "border-red-500/50" : "border-royal-gold/20 focus:border-royal-gold",
             inputClassName
           )}

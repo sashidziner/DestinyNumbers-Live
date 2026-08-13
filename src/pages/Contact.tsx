@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, Briefcase, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { SOCIAL_LINKS } from '../lib/constants';
 import { StandardNameInput, StandardEmailInput, StandardSelect, StandardTextArea } from '../components/StandardFormFields';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 const MAILER_URL = (import.meta.env.VITE_MAILER_URL as string) || `${import.meta.env.BASE_URL}send-mail.php`;
 
@@ -26,6 +28,11 @@ function validate(formData: typeof EMPTY_FORM) {
 }
 
 export default function ContactPage() {
+  useSEO({
+    title: 'Contact Dr. Arun Poovaiah | Destiny Numbers Bangalore',
+    description: 'Get in touch with Destiny Numbers, Bangalore. Book a numerology, Vastu or astrology consultation with Dr. Arun Poovaiah — call, WhatsApp or send us a message.',
+    keywords: 'contact destiny numbers, book numerology consultation bangalore, dr arun poovaiah contact, vastu consultation booking',
+  });
   const [formData, setFormData] = useState(EMPTY_FORM);
   const [errors, setErrors]     = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -210,6 +217,19 @@ export default function ContactPage() {
               </form>
             )}
           </motion.div>
+        </div>
+
+        {/* Quick Links */}
+        <div className="mt-24 pt-12 border-t border-[#E0D5C0] text-center">
+          <p className="text-[10px] font-black tracking-widest text-[#C9A84C]/80 uppercase mb-6">Prefer to explore first?</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to="/consultation" className="px-6 py-3 border border-[#C9A84C]/30 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Consultation Plans</Link>
+            <Link to="/services" className="px-6 py-3 border border-[#C9A84C]/30 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">All Services</Link>
+            <Link to="/tools" className="px-6 py-3 border border-[#C9A84C]/30 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Free Tools</Link>
+            <Link to="/calculator" className="px-6 py-3 border border-[#C9A84C]/30 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Numerology Calculator</Link>
+            <Link to="/about" className="px-6 py-3 border border-[#C9A84C]/30 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">About Dr. Arun</Link>
+            <Link to="/blog" className="px-6 py-3 border border-[#C9A84C]/30 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Blog</Link>
+          </div>
         </div>
       </div>
     </div>

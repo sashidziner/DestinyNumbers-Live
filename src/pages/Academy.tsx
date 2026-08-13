@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useSEO } from '../lib/useSEO';
 import { 
   ChevronDown, 
   Check, 
@@ -334,6 +335,11 @@ const ACADEMY_DATA: Record<string, CourseData> = {
 };
 
 const Academy: React.FC = () => {
+  useSEO({
+    title: 'Numerology & Astrology Academy | Learn From Dr. Arun Poovaiah',
+    description: 'Destiny Numbers Academy — structured courses on numerology, Vastu, tarot and Nadi astrology, taught by Dr. Arun Poovaiah in Bangalore.',
+    keywords: 'numerology course, learn numerology, vastu course, tarot classes, nadi astrology training, destiny numbers academy, numerology certification',
+  });
   const [activeTab, setActiveTab] = useState<string>('numerology');
   const [openModule, setOpenModule] = useState<number | null>(0);
 

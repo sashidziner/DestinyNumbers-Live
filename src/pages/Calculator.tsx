@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, 
-  RefreshCw, 
-  Star, 
+  ArrowRight,
+  RefreshCw,
   ArrowLeft
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { StandardNameInput, StandardDateInput } from '../components/StandardFormFields';
+import { useSEO } from '../lib/useSEO';
 import { 
   calculateBirthNumber, 
   calculateLifePathNumber, 
@@ -157,6 +157,11 @@ const getZodiacInfo = (dobString: string) => {
 };
 
 export default function CalculatorPage() {
+  useSEO({
+    title: 'Free Numerology Calculator | Name, Bhagyank & Moolank',
+    description: 'Free online numerology calculator — instantly compute your name number, Bhagyank (destiny) and Moolank (birth number) using Chaldean and Pythagorean systems.',
+    keywords: 'free numerology calculator, name number calculator, bhagyank calculator, moolank calculator, chaldean numerology, life path calculator',
+  });
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dob, setDob] = useState('');
@@ -544,35 +549,7 @@ export default function CalculatorPage() {
       
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="w-12 h-12 rounded-none bg-[#1C3557] flex items-center justify-center mx-auto mb-4 shadow-lg border border-[#C9A84C]/20"
-          >
-            <Star className="text-[#C9A84C] w-6 h-6" />
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mb-4"
-          >
-            <h2 style={{
-              fontFamily: 'var(--font-serif)',
-              fontSize: '24px',
-              fontWeight: 400,
-              lineHeight: 1.3,
-              margin: '0 0 4px 0',
-              color: '#1C3557',
-              letterSpacing: '0',
-              textAlign: 'center'
-            }}>
-              Scientific <span style={{ color: '#C9A84C' }}>Numerology Matrix</span>
-            </h2>
-            <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
-          </motion.div>
-          
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             style={{
@@ -584,19 +561,11 @@ export default function CalculatorPage() {
               lineHeight: 1.2
             }}
           >
-            Destiny <span style={{ color: '#C9A84C' }}>Pattern</span>
+            Find out your  <span style={{ color: '#C9A84C' }}>Destiny Pattern</span>
           </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-[15px] md:text-[16px] text-[#1C3557]/75 max-w-2xl mx-auto font-normal leading-relaxed italic"
-          >
-            Reveal the cosmic algorithms of your identity. By merging Chaldean name frequencies with<br />Lo Shu grid birth alignments, we decode your soul's roadmap.
-          </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           className="mx-auto max-w-[800px] glass-card p-8 md:p-12 rounded-none bg-white border border-[#E0D5C0] shadow-[0_40px_100px_rgba(13,27,62,0.05)] relative overflow-hidden"

@@ -2,8 +2,14 @@
 import React from 'react';
 import { Shield } from 'lucide-react';
 import { LegalPageLayout } from '../components/LegalPageLayout';
+import { useSEO } from '../lib/useSEO';
 
 export default function PrivacyPolicy() {
+  useSEO({
+    title: 'Privacy Policy | Destiny Numbers',
+    description: 'Read the Destiny Numbers privacy policy — how we collect, use, store and protect your personal information.',
+    keywords: 'destiny numbers privacy policy, privacy, data protection, personal information',
+  });
   return (
     <LegalPageLayout 
       title="Privacy & Policy" 

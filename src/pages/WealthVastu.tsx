@@ -10,8 +10,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function WealthVastu() {
+  useSEO({
+    title: 'Wealth Vastu | Vastu Tips to Attract Prosperity',
+    description: 'Wealth Vastu consultation — align your home or office to attract financial abundance, save more and grow your wealth.',
+    keywords: 'wealth vastu, money vastu, prosperity vastu, financial abundance vastu, wealth corner vastu, vastu for money',
+  });
   const wealthKillers = [
     { text: "Leaking taps and broken fixtures", desc: "water is prosperity in Vastu; every drip is wealth leaving" },
     { text: "Clutter at the entrance", desc: "blocks incoming opportunities before they even reach you" },

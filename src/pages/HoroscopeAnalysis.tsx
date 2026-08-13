@@ -11,8 +11,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function HoroscopeAnalysis() {
+  useSEO({
+    title: 'Horoscope Analysis | Personal Vedic Birth Chart Reading',
+    description: 'Detailed Vedic horoscope analysis by Dr. Arun Poovaiah — understand planetary influences, life themes and remedies from your birth chart.',
+    keywords: 'horoscope analysis, vedic astrology, birth chart reading, jyotish consultation, kundli analysis bangalore, nakshatra analysis',
+  });
   const coverageItems = [
     { title: 'Ascendant (Lagna) & 12 Houses', desc: 'Insights into career, wealth, marriage, and health.' },
     { title: 'Planetary Positions & Strengths', desc: 'How each planet influences your personality and destiny.' },

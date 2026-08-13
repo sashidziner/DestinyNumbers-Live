@@ -10,8 +10,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HeroHeader } from '../components/HeroHeader';
+import { useSEO } from '../lib/useSEO';
 
 export default function IndustrialVastu() {
+  useSEO({
+    title: 'Industrial Vastu Consultation | Factories & Warehouses',
+    description: 'Industrial Vastu for factories, warehouses and manufacturing units. Improve output, safety and profits with expert Vastu correction.',
+    keywords: 'industrial vastu, factory vastu, warehouse vastu, manufacturing unit vastu, industrial vastu consultant, plant vastu',
+  });
   const diffPoints = [
     "Many factories fail not because of market conditions — but because the product being manufactured is misaligned with the owner's birth chart and the factory's facing direction",
     "A factory producing the wrong product for its owner's planetary energy will struggle regardless of investment, infrastructure, or effort",
