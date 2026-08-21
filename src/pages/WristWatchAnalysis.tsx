@@ -17,8 +17,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function WristWatchAnalysis() {
   useSEO({
-    title: 'Wrist Watch Analysis | Numerology of the Time You Wear',
-    description: 'Discover how your wrist watch influences your energy and destiny. Personal wrist watch consultation grounded in numerology by Dr. Arun Poovaiah.',
+    title: 'Wrist Watch Numerology Analysis | Destiny Numbers',
+    description: 'Discover how your wrist watch choice affects your energy and luck. Unique wrist watch numerology consultation by Dr. Arun Poovaiah.',
     keywords: 'wrist watch numerology, watch analysis, lucky watch, numerology accessories, destiny numbers watch, timepiece numerology',
   });
   const points = [

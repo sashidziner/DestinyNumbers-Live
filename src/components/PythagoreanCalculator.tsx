@@ -305,7 +305,7 @@ export default function PythagoreanCalculator({ onBack }: { onBack?: () => void 
                 Book consultation <PhoneCall className="w-4 h-4" />
               </Link>
               <a 
-                href="https://wa.me/917406357511" 
+                href="https://wa.me/918971225552" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="px-12 py-6 bg-white/5 border border-white/20 text-white font-display font-black tracking-widest text-[12px] uppercase hover:bg-white/10 transition-all flex items-center justify-center gap-4 rounded-none"

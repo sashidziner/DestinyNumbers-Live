@@ -25,8 +25,8 @@ interface DashaPlanet {
 
 export default function ReikiMaster() {
   useSEO({
-    title: 'Reiki Master Consultation | Universal Life Energy Healing',
-    description: 'Reiki healing sessions with a certified master — release blocks, restore balance and welcome universal life energy into your body and life.',
+    title: 'Reiki Healing & Master Courses | Destiny Numbers',
+    description: 'Experience Reiki healing sessions or learn Reiki from a certified master. Reiki consultation and training by Dr. Arun Poovaiah, Bangalore.',
     keywords: 'reiki master, reiki healing bangalore, reiki sessions, universal energy healing, usui reiki, energy healer',
   });
   const howItWorksRef = useRef<HTMLDivElement>(null);

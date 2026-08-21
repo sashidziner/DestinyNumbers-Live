@@ -12,8 +12,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function RelationshipCompatibility() {
   useSEO({
-    title: 'Relationship Compatibility Reading | Numerology & Astrology',
-    description: 'In-depth relationship compatibility reading combining numerology and Vedic astrology. Understand each other\'s needs and strengthen your bond.',
+    title: 'Relationship Compatibility Analysis | Destiny Numbers',
+    description: 'Understand compatibility in your relationship through astrology and numerology. Book a relationship compatibility consultation in Bangalore.',
     keywords: 'relationship compatibility, love compatibility, numerology relationship, astrology love match, destiny numbers relationship, couple reading',
   });
   const layers = [

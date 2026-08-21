@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSEO } from '../lib/useSEO';
+import { imgUrl } from '../lib/utils';
 
 // --- DATASET: 22 MAJOR ARCANA (ELLIOT ORACLE) ---
 interface TarotCard {
@@ -17,133 +18,133 @@ interface TarotCard {
 const CARDS: TarotCard[] = [
   {
     name: "The Fool", rank: "0", yes: true,
-    img: "/assets/img/tarot/IMG_5725.jpg",
+    img: "/assets/img/tarot/the-fool.jpg",
     msg_yes: "A leap of faith is called for. The Fool leaps — and the net appears.",
     msg_no: "You are rushing headlong into chaos. Pause before you leap."
   },
   {
     name: "The Magician", rank: "I", yes: true,
-    img: "/assets/img/tarot/magicianIMG_0792.jpg",
+    img: "/assets/img/tarot/the-magician.jpg",
     msg_yes: "You have every tool you need. The Magician says YES — create it.",
     msg_no: "Your power is being scattered. Focus before you act."
   },
   {
     name: "The High Priestess", rank: "II", yes: true,
-    img: "/assets/img/tarot/IMG_5240.jpg",
+    img: "/assets/img/tarot/the-high-priestess.jpg",
     msg_yes: "Trust your deepest instinct. The answer you already know is YES.",
     msg_no: "Something is hidden from you still. Wait for full clarity."
   },
   {
     name: "The Empress", rank: "III", yes: true,
-    img: "/assets/img/tarot/EmpressIMG_0287.jpg",
+    img: "/assets/img/tarot/the-empress.jpg",
     msg_yes: "Abundance surrounds you. The Empress says YES — you are safe.",
     msg_no: "Neglect in some area is blocking the flow. Nurture first."
   },
   {
     name: "The Emperor", rank: "IV", yes: true,
-    img: "/assets/img/tarot/IMG_5377.jpg",
+    img: "/assets/img/tarot/the-emperor.jpg",
     msg_yes: "Stand firm and take authority. The Emperor commands YES.",
     msg_no: "Your foundation is unstable. Build structure before moving forward."
   },
   {
     name: "The Hierophant", rank: "V", yes: true,
-    img: "/assets/img/tarot/IMG_6745.jpg",
+    img: "/assets/img/tarot/the-hierophant.jpg",
     msg_yes: "The Divine is listening. You are seen and heard — YES.",
     msg_no: "Inflexibility is blocking your path. Open your mind."
   },
   {
     name: "The Lovers", rank: "VI", yes: true,
-    img: "/assets/img/tarot/IMG_8148.jpg",
+    img: "/assets/img/tarot/the-lovers.jpg",
     msg_yes: "Love and alignment say YES. Choose with your whole heart.",
     msg_no: "Disharmony in a key relationship needs healing first."
   },
   {
     name: "The Chariot", rank: "VII", yes: true,
-    img: "/assets/img/tarot/IMG_21.jpg",
+    img: "/assets/img/tarot/the-chariot.jpg",
     msg_yes: "Drive forward with courage. The Chariot charges toward YES.",
     msg_no: "Fear of the wrong decision has stalled your momentum. Reclaim control."
   },
   {
     name: "Strength", rank: "VIII", yes: true,
-    img: "/assets/img/tarot/Strength.jpg",
+    img: "/assets/img/tarot/strength.jpg",
     msg_yes: "Your inner fortitude is your answer. YES — you are stronger than you know.",
     msg_no: "You are being too hard on yourself. Restore compassion first."
   },
   {
     name: "The Hermit", rank: "IX", yes: false,
-    img: "/assets/img/tarot/IMG_1809.jpg",
+    img: "/assets/img/tarot/the-hermit.jpg",
     msg_yes: "The answer lies within. Seek silence — then act.",
     msg_no: "Not yet. The Hermit asks you to go within before you move forward."
   },
   {
     name: "Wheel of Fortune", rank: "X", yes: true,
-    img: "/assets/img/tarot/IMG_0479.png",
+    img: "/assets/img/tarot/wheel-of-fortune.jpg",
     msg_yes: "The wheel is turning in your favour. YES — change is coming.",
     msg_no: "A cycle is repeating. Step off the wheel and break the pattern."
   },
   {
     name: "Justice", rank: "XI", yes: true,
-    img: "/assets/img/tarot/IMG_1805.jpg",
+    img: "/assets/img/tarot/justice.jpg",
     msg_yes: "Truth and fairness support you. Justice says YES.",
     msg_no: "Something feels unjust in this situation. Seek truth first."
   },
   {
     name: "The Hanged Man", rank: "XII", yes: false,
-    img: "/assets/img/tarot/IMG_1801.jpg",
+    img: "/assets/img/tarot/the-hanged-man.jpg",
     msg_yes: "A new perspective is dawning. Surrender — then proceed.",
     msg_no: "Pause. The Hanged Man asks you to wait and gain new wisdom."
   },
   {
     name: "Death", rank: "XIII", yes: false,
-    img: "/assets/img/tarot/DeathIMG_0729.jpg",
+    img: "/assets/img/tarot/death.jpg",
     msg_yes: "Transformation is complete. A new chapter is beginning — YES.",
     msg_no: "You are resisting a necessary ending. Let go before moving on."
   },
   {
     name: "Temperance", rank: "XIV", yes: true,
-    img: "/assets/img/tarot/IMG_1817.jpg",
+    img: "/assets/img/tarot/temperance.jpg",
     msg_yes: "Balance and patience will bring you YES. Trust the flow.",
     msg_no: "Depletion is real. Restore yourself before you act."
   },
   {
     name: "The Devil", rank: "XV", yes: false,
-    img: "/assets/img/tarot/IMG_1164.jpg",
+    img: "/assets/img/tarot/the-devil.jpg",
     msg_yes: "Break the chains. Freedom is closer than you think.",
     msg_no: "Self-limiting beliefs are keeping you imprisoned. Not yet."
   },
   {
     name: "The Tower", rank: "XVI", yes: false,
-    img: "/assets/img/tarot/IMG_0104.jpg",
+    img: "/assets/img/tarot/the-tower.jpg",
     msg_yes: "After the storm comes clarity. Something needed to fall.",
     msg_no: "Stop avoiding what needs to be felt. The Tower says NO — not yet."
   },
   {
     name: "The Star", rank: "XVII", yes: true,
-    img: "/assets/img/tarot/TheStarIMG_0607.jpg",
+    img: "/assets/img/tarot/the-star.jpg",
     msg_yes: "Hope is justified. The Star shines YES on your path.",
     msg_no: "Balance your spiritual hopes with practical action first."
   },
   {
     name: "The Moon", rank: "XVIII", yes: false,
-    img: "/assets/img/tarot/IMG_7340.jpg",
+    img: "/assets/img/tarot/the-moon.jpg",
     msg_yes: "Trust your instincts — the truth is emerging from the fog.",
     msg_no: "Illusion clouds the path. The Moon says wait for clarity."
   },
   {
     name: "The Sun", rank: "XIX", yes: true,
-    img: "/assets/img/tarot/IMG_1569.jpg",
+    img: "/assets/img/tarot/the-sun.jpg",
     msg_yes: "Radiant YES. The Sun lights your path — everything is working out.",
     msg_no: "Clouds are clearing. The warmth of YES is very close now."
   },
   {
     name: "Judgement", rank: "XX", yes: true,
-    img: "/assets/img/tarot/IMG_8243.jpg",
+    img: "/assets/img/tarot/judgement.jpg",
     msg_yes: "Rebirth and renewal — Judgement sounds the trumpet of YES.",
     msg_no: "Are you sleepwalking? Wake up to what truly needs to change."
   },
   {
     name: "The World", rank: "XXI", yes: true,
-    img: "/assets/img/tarot/IMG_0378.jpg",
+    img: "/assets/img/tarot/the-world.jpg",
     msg_yes: "Complete and whole — The World says a resounding YES. You made it.",
     msg_no: "Something remains unfinished. Complete it before claiming victory."
   }
@@ -250,8 +251,8 @@ interface Particle {
 
 export default function FreeTarotReading() {
   useSEO({
-    title: 'Free Tarot Reading Online | Instant Yes/No Card Draw',
-    description: 'Draw a Major Arcana card and receive an instant, free tarot reading online. Explore love, career and life questions with the Destiny Numbers tarot tool.',
+    title: 'Free Tarot Reading Online | Destiny Numbers',
+    description: 'Try a free online tarot reading for quick insight into your current life situation. No cost, instant tarot guidance by Destiny Numbers.',
     keywords: 'free tarot reading, online tarot, instant tarot draw, yes no tarot, love tarot free, career tarot online, rider waite tarot',
   });
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -660,7 +661,7 @@ export default function FreeTarotReading() {
                               </div>
                               {/* Card Front */}
                               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-lg overflow-hidden border-[1px] border-[#c8a84b] shadow-[0_0_20px_rgba(200,168,75,0.35)]">
-                                  <img src={selectedCard.card.img} alt={selectedCard.card.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                                  <img src={imgUrl(selectedCard.card.img)} alt={selectedCard.card.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                                   <div className="absolute inset-0 bg-[#000]/10 pointer-events-none" />
                               </div>
                            </div>
@@ -744,6 +745,51 @@ export default function FreeTarotReading() {
         .backface-hidden { backface-visibility: hidden; }
         .rotate-y-180 { transform: rotateY(180deg); }
       `}</style>
+
+      {/* SEO Content */}
+      <section className="relative z-20 w-full bg-white/60 backdrop-blur border-t border-[#c8a84b]/20 mt-8 py-16 px-6">
+        <div className="max-w-4xl mx-auto prose prose-slate font-sans">
+          <h2 className="text-3xl font-display italic text-[#1C3557] mb-6">About This Free Tarot Reading</h2>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            This is a free online tarot reading tool built on the 22 Major Arcana of the classical Rider–Waite deck. Every card carries a symbolic message about a life theme — love, career, purpose, timing, or transformation. Rather than predicting a fixed future, the tarot works as a mirror: it reflects the energy of the question you bring to it and reveals the archetypal forces most active around your situation right now.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            To use the reading, focus on one clear question, type it into the box above, shuffle the deck, and let your intuition guide your hand to a single card. The Major Arcana card that appears will provide a direct <strong>Yes / No</strong> answer along with a short interpretive message — a signal you can carry forward into decisions about relationships, work, health or spiritual practice.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            Tarot is one of the oldest divination systems in continuous use. At Destiny Numbers, we integrate tarot with numerology, Vedic astrology, and Nadi readings to give you a multi-layered view of your situation. For a personalised, in-depth tarot session or combined consultation with Dr. Arun Poovaiah, please <Link to="/consultation" className="text-[#c8a84b] font-semibold hover:underline">book a private consultation</Link>.
+          </p>
+
+          <h3 className="text-2xl font-display italic text-[#1C3557] mt-10 mb-4">Frequently Asked Questions</h3>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Is this tarot reading really free?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Yes. This entire tool is free to use, unlimited times per day. There is no signup or payment required for the Yes / No card draw.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">How accurate is an online tarot draw?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Accuracy comes from the sincerity of the question and your openness to the message. The random shuffle mirrors the same synchronicity principle used in traditional physical readings.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Can I ask more than one question?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Yes, but we recommend focusing on one clear question per session. Multiple rapid draws on the same topic dilute the clarity of the reading.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">What does a Yes / No tarot reading mean?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Each Major Arcana card in this deck is classified as either affirming (Yes) or cautionary (No) based on its traditional upright meaning. The short message underneath explains the "why" so you can act on it with wisdom rather than blind hope.</p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-display italic text-[#1C3557] mt-10 mb-4">Explore More</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/services/tarot" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#c8a84b] hover:text-white hover:border-transparent transition-all">Full Tarot Consultation</Link>
+            <Link to="/tools" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#c8a84b] hover:text-white hover:border-transparent transition-all">All Free Tools</Link>
+            <Link to="/calculator" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#c8a84b] hover:text-white hover:border-transparent transition-all">Numerology Calculator</Link>
+            <Link to="/services/horoscope" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#c8a84b] hover:text-white hover:border-transparent transition-all">Horoscope Analysis</Link>
+            <Link to="/consultation" className="px-5 py-2 bg-[#1C3557] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#c8a84b] transition-all">Book a Consultation</Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -55,8 +55,8 @@ interface CalculationResult {
 
 export default function CompatibilityCalculator() {
   useSEO({
-    title: 'Numerology Compatibility Calculator | Free Online Tool',
-    description: 'Check numerology compatibility between two names or dates of birth with our free calculator. Understand relationship, marriage and business-partner match.',
+    title: 'Numerology Compatibility Calculator | Destiny Numbers',
+    description: 'Check numerology compatibility for marriage, business or relationships. Free love and partnership compatibility calculator by Destiny Numbers.',
     keywords: 'numerology compatibility, name compatibility calculator, marriage compatibility numerology, love compatibility numbers, partner match calculator',
   });
   const whatsappNumber = BRAND_DATA.phone.replace(/[^0-9]/g, '');
@@ -434,6 +434,49 @@ export default function CompatibilityCalculator() {
               </div>
            </div>
         </div>
+
+        {/* SEO Content */}
+        <section className="mt-24 pt-16 border-t border-[#1C3557]/10 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-display italic text-[#1C3557] mb-6">About Numerology Compatibility</h2>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            Numerology compatibility is one of the oldest ways to assess relationship potential. Every person carries two primary numbers — the <strong>Birth Number</strong> (Moolank) drawn from the day of birth and the <strong>Life Path Number</strong> (Bhagyank) drawn from the full date. When two people connect, these numbers interact in four combinations that reveal how the relationship flows on a daily basis, how it handles long-term direction, and where the natural friction points sit.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            This free compatibility calculator scores each of the four combinations as Lucky, Neutral, or Enemy, and produces an overall harmony percentage backed by a diagnostic message. It also renders individual Lo Shu grids for each partner — a visual snapshot of the planetary strengths and gaps in each person's numerological chart. Use it for love, marriage, dating, business partnerships or family reconciliation.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            A low score does not doom a relationship — it simply flags the areas where conscious effort is required. Numerology remedies, mobile number correction and Vastu adjustments can shift the day-to-day energy dramatically. For a full marriage-matching or partner-analysis session with Dr. Arun Poovaiah, please <Link to="/consultation" className="text-[#C9A84C] font-semibold hover:underline">book a private consultation</Link>.
+          </p>
+
+          <h3 className="text-2xl font-display italic text-[#1C3557] mt-10 mb-4">Frequently Asked Questions</h3>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Is numerology compatibility the same as astrology matching?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">No. Astrology matching (like Ashtakoot Milan) uses birth-star and planet positions. Numerology compatibility uses date-of-birth-derived numbers. Both are useful — best when combined.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">What is a good compatibility percentage?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">A score above 70% indicates natural harmony. 50–70% is a workable match with conscious effort. Below 50% flags karmic friction that benefits from expert analysis before commitment.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Can two "enemy" numbers make a lasting relationship?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Yes. Enemy pairings often produce transformative, karmic relationships. They demand emotional maturity and often benefit from Vastu or name-correction remedies.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Does this work for business partnerships too?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Absolutely. The same number interactions govern how two founders will operate — how decisions flow, how conflict resolves, and where the partnership creates or drains wealth.</p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-display italic text-[#1C3557] mt-10 mb-4">Explore Deeper Compatibility Services</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/services/marriage-matching" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Marriage Matching</Link>
+            <Link to="/services/relationship-compatibility" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Relationship Compatibility</Link>
+            <Link to="/calculator" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Numerology Calculator</Link>
+            <Link to="/services/horoscope" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Horoscope Analysis</Link>
+            <Link to="/consultation" className="px-5 py-2 bg-[#1C3557] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] transition-all">Book a Consultation</Link>
+          </div>
+        </section>
       </div>
     </div>
   );

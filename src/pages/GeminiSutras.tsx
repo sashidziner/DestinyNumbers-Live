@@ -13,8 +13,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function GeminiSutras() {
   useSEO({
-    title: 'Gemini Sutras | Timeless Astrological Insights',
-    description: 'Discover the Gemini Sutras — a curated selection of Vedic astrological wisdom, atma karaka insights and karmic guidance from Destiny Numbers.',
+    title: 'Gemini Sutras Astrology Insights | Destiny Numbers',
+    description: 'Explore Gemini Sutras for deep astrological insights into destiny and life patterns. Unique consultation offering from Destiny Numbers.',
     keywords: 'gemini sutras, atma karaka, astrological insights, vedic sutras, destiny numbers wisdom, karmic astrology',
   });
   const scienceCards = [

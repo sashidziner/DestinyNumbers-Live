@@ -9,8 +9,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function BlogListing() {
   useSEO({
-    title: 'Blog | Numerology, Vastu & Astrology Insights',
-    description: 'Read the Destiny Numbers blog — practical guidance on numerology, Vastu, astrology, tarot and spiritual living by Dr. Arun Poovaiah.',
+    title: 'Numerology & Astrology Blog | Destiny Numbers',
+    description: 'Insights and articles on numerology, astrology, Vastu and healing by Dr. Arun Poovaiah. Learn how these ancient sciences apply to modern life.',
     keywords: 'numerology blog, vastu articles, astrology insights, tarot blog, dr arun poovaiah blog, spiritual articles',
   });
   const { posts, loading } = useCMS();

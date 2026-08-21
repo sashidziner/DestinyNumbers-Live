@@ -19,8 +19,8 @@ interface Gemstone {
 
 export default function GemstoneConsultation() {
   useSEO({
-    title: 'Gemstone Consultation | Choose the Right Stone for You',
-    description: 'Personalised gemstone recommendations based on your Vedic chart and numerology. Wear the right ratna for health, wealth and harmony.',
+    title: 'Gemstone Consultation & Recommendation | Destiny Numbers',
+    description: 'Find the right gemstone for your chart to enhance luck, health and prosperity. Expert gemstone consultation by Dr. Arun Poovaiah.',
     keywords: 'gemstone consultation, ratna recommendation, vedic gemstones, birth chart gemstones, dr arun poovaiah gemstone, ruby pearl coral',
   });
   const gemstoneGuide: Gemstone[] = [

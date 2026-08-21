@@ -15,8 +15,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function OfficeVastu() {
   useSEO({
-    title: 'Office Vastu Consultation | Vastu for Workplace Success',
-    description: 'Office Vastu guidance to boost productivity, teamwork and profits. Analyse and correct your workplace layout for optimal energy flow.',
+    title: 'Office Vastu Consultation | Destiny Numbers',
+    description: 'Improve productivity and growth with expert office Vastu consultation. Workspace Vastu analysis by Dr. Arun Poovaiah, Bangalore.',
     keywords: 'office vastu, workplace vastu, cabin vastu, vastu for office layout, office vastu bangalore, workspace vastu',
   });
   const entrancePoints = [
@@ -173,7 +173,7 @@ export default function OfficeVastu() {
             Book Office Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
           </Link>
           <a 
-            href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20an%20Office%20Vastu%20Consultation.%2520I'm%20sharing%20my%20floor%20plan."
+            href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20an%20Office%20Vastu%20Consultation.%2520I'm%20sharing%20my%20floor%20plan."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"

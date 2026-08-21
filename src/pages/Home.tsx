@@ -76,8 +76,8 @@ const TESTIMONIALS = [
 
 export default function Home() {
   useSEO({
-    title: 'Destiny Numbers | Numerology, Vastu & Astrology by Dr. Arun Poovaiah',
-    description: 'Bangalore-based numerology, Vastu and astrology consultancy by Dr. Arun Poovaiah. Dare to design your own destiny with Nadi and Numerology — book a personal consultation today.',
+    title: 'Destiny Numbers | Numerology, Vastu & Astrology Bangalore',
+    description: 'Bangalore-based numerology, Vastu & astrology by Dr. Arun Poovaiah. Design your destiny with Nadi and Numerology — book a consultation today.',
     keywords: 'destiny numbers, dr arun poovaiah, numerology bangalore, vastu consultant, nadi astrology, name correction, business numerology, tarot reading',
   });
   const { posts, loading } = useCMS();

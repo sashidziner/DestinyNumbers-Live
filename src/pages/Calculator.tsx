@@ -158,8 +158,8 @@ const getZodiacInfo = (dobString: string) => {
 
 export default function CalculatorPage() {
   useSEO({
-    title: 'Free Numerology Calculator | Name, Bhagyank & Moolank',
-    description: 'Free online numerology calculator — instantly compute your name number, Bhagyank (destiny) and Moolank (birth number) using Chaldean and Pythagorean systems.',
+    title: 'Free Numerology Calculator | Destiny Numbers by Dr. Arun Poovaiah',
+    description: 'Calculate your life path, destiny and soul urge numbers instantly. Free numerology calculator by Bangalore numerologist Dr. Arun Poovaiah.',
     keywords: 'free numerology calculator, name number calculator, bhagyank calculator, moolank calculator, chaldean numerology, life path calculator',
   });
   const [firstName, setFirstName] = useState('');
@@ -319,11 +319,11 @@ export default function CalculatorPage() {
             </div>
           </div>
 
-          {/* Western Astrology Decode Section */}
+          {/* Sun Sign Decode Section */}
           <div className="mb-12">
             <div className="mb-6">
               <h2 className="font-serif text-[28px] font-normal text-[#1C3557] tracking-tight">
-                Western <span className="text-[#C9A84C]">Astrology Decode</span>
+                Sun <span className="text-[#C9A84C]">Sign Decode</span>
               </h2>
               <div className="w-[120px] h-[1px] bg-[#C9A84C] mt-1"></div>
             </div>
@@ -638,10 +638,53 @@ export default function CalculatorPage() {
         
         <div className="mt-6 text-center">
           <p className="text-[14px] text-black tracking-[0.25em] font-extrabold italic leading-relaxed">
-            * High precision dasha periods and planetary <br /> 
+            * High precision dasha periods and planetary <br />
             degree correction require executive sessions.
           </p>
         </div>
+
+        {/* SEO Content */}
+        <section className="mt-24 pt-16 border-t border-[#E0D5C0] max-w-3xl mx-auto">
+          <h2 className="text-3xl font-serif italic text-[#1C3557] mb-6">About This Numerology Calculator</h2>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            This free numerology calculator uses the ancient Chaldean and Pythagorean systems to decode two of the most important numbers in your life — the <strong>Moolank</strong> (Birth Number or Psychic Number), derived from the day you were born, and the <strong>Bhagyank</strong> (Life Path Number or Destiny Number), derived from your full date of birth. Together they reveal how you experience yourself and how the world experiences you.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            The report generated here goes beyond a single-digit answer. It builds a <strong>Lo Shu Grid</strong> and a <strong>Vedic Matrix</strong> for your birth data, identifies missing numbers, highlights active planes (yogas) formed by present digits, and analyses vibrational compatibility between your name and your date of birth. Each of these signals maps to real-life themes: career direction, wealth attraction, relationship style, health tendencies and spiritual bandwidth.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            To get the most out of this tool, use your <strong>full legal name at birth</strong> and your <strong>exact date of birth</strong>. If the alignment score is neutral or conflicting, a <Link to="/services/name-correction" className="text-[#C9A84C] font-semibold hover:underline">name correction</Link> or <Link to="/services/business-name-numerology" className="text-[#C9A84C] font-semibold hover:underline">business name numerology</Link> session may help. For a complete personal reading with dasha timing and remedies, <Link to="/consultation" className="text-[#C9A84C] font-semibold hover:underline">book a consultation with Dr. Arun Poovaiah</Link>.
+          </p>
+
+          <h3 className="text-2xl font-serif italic text-[#1C3557] mt-10 mb-4">Frequently Asked Questions</h3>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">What's the difference between Moolank and Bhagyank?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Moolank comes from just the day of your birth (1–31 reduced to a single digit) and represents your inner nature. Bhagyank uses the entire date and represents your outer mission and life direction.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Which numerology system does this tool use?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">A blend of Chaldean and Pythagorean systems, plus the classical Lo Shu Grid and Vedic Matrix, giving you a multi-tradition view rather than relying on one method alone.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Do I need to enter my legal name?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Yes — use the exact name that appears on your official documents. Different spellings carry different vibrations, so nickname or short forms will give different results.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-[#1C3557] mb-2">Is the calculator really free?</h4>
+              <p className="text-[#1C3557]/80 leading-relaxed">Yes, this tool is completely free with no signup. Personal consultations, name-correction service and executive sessions are paid.</p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-serif italic text-[#1C3557] mt-10 mb-4">Related Tools & Services</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/compatibility" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Compatibility Calculator</Link>
+            <Link to="/analyser/mobile" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Mobile Analyser</Link>
+            <Link to="/brand-auditor" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Brand Auditor</Link>
+            <Link to="/services/numerology" className="px-5 py-2 border border-[#1C3557]/20 text-[#1C3557] text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] hover:text-white hover:border-transparent transition-all">Numerology Consultation</Link>
+            <Link to="/consultation" className="px-5 py-2 bg-[#1C3557] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#C9A84C] transition-all">Book a Consultation</Link>
+          </div>
+        </section>
       </div>
     </div>
   );

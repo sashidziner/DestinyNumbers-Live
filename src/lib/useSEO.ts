@@ -30,6 +30,8 @@ function setCanonical(href: string) {
   el.setAttribute('href', href);
 }
 
+const CANONICAL_ORIGIN = 'https://www.destinynumbers.in';
+
 export function useSEO({ title, description, keywords, canonical }: SEOInput) {
   const { pathname } = useLocation();
 
@@ -39,7 +41,8 @@ export function useSEO({ title, description, keywords, canonical }: SEOInput) {
     if (keywords) setMeta('keywords', keywords);
 
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-    const href = canonical || `${window.location.origin}${base}${pathname}`;
+    const origin = import.meta.env.DEV ? window.location.origin : CANONICAL_ORIGIN;
+    const href = canonical || `${origin}${base}${pathname}`;
     setCanonical(href);
   }, [title, description, keywords, canonical, pathname]);
 }

@@ -249,7 +249,7 @@ export default function BlogPostPage() {
                   {post.author.bio || "A cosmic guide dedicated to helping souls find their path to prosperity through numerical vibrations."}
                 </p>
                 <div className="flex gap-4">
-                  <a href="#" className="text-xs font-bold text-warm-accent hover:underline">Instagram</a>
+                  <a href="https://www.instagram.com/destinynumbers.a/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-warm-accent hover:underline">Instagram</a>
                   <a 
                     href="https://www.youtube.com/@destinynumbers5076" 
                     target="_blank" 

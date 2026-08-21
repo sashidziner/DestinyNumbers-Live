@@ -72,8 +72,8 @@ const tools = [
 
 export default function ToolsPage() {
   useSEO({
-    title: 'Free Numerology Tools | Destiny Numbers',
-    description: 'Free numerology tools — name number calculator, mobile analyser, compatibility checker, personal year roadmap and brand auditor. Discover your numbers instantly.',
+    title: 'Free Numerology & Astrology Tools | Destiny Numbers',
+    description: 'Access free calculators and analysers for numerology, mobile numbers and business names. Instant results from Destiny Numbers.',
     keywords: 'free numerology tools, name number calculator, mobile number analyser, numerology compatibility, brand numerology, personal year calculator',
   });
   const location = useLocation();
@@ -206,6 +206,40 @@ export default function ToolsPage() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* SEO Content */}
+              <section className="mt-24 pt-16 border-t border-[#1C3557]/10 max-w-3xl mx-auto px-6">
+                <h2 className="text-3xl font-display italic text-[#1C3557] mb-6">Free Numerology & Astrology Tools</h2>
+                <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+                  Every tool on this page is completely free, unlimited, and designed to give you instant clarity on the numeric and vibrational patterns operating in your life right now. From full numerology matrix calculators to mobile-number analysers, brand auditors and tarot draws — each tool encodes decades of applied practice from Dr. Arun Poovaiah and the Destiny Numbers research team into a simple form-based experience.
+                </p>
+                <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+                  These calculators use the classical Chaldean, Pythagorean, Lo Shu and Vedic Matrix systems. They are diagnostic — they identify your core numbers, missing energies, active planes (yogas), compatibility scores, and vibrational alignment. What they do not do is give you the corrective remedy, personalised timing, or degree-based dasha analysis; those require an <Link to="/consultation" className="text-[#C9A84C] font-semibold hover:underline">expert consultation</Link>.
+                </p>
+                <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+                  Use them as often as you like. Share the results with family, business partners, or your own consultant. For deeper analysis or a corrective plan, explore our <Link to="/services" className="text-[#C9A84C] font-semibold hover:underline">full services</Link> or <Link to="/contact" className="text-[#C9A84C] font-semibold hover:underline">contact us</Link> directly.
+                </p>
+
+                <h3 className="text-2xl font-display italic text-[#1C3557] mt-10 mb-4">Which Tool Should I Use?</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-bold text-[#1C3557] mb-2">Start with the Date of Birth calculator</h4>
+                    <p className="text-[#1C3557]/80 leading-relaxed">It generates your Moolank, Bhagyank, Lo Shu grid and Vedic matrix in one shot — the foundation of every other analysis.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#1C3557] mb-2">Checking a mobile number?</h4>
+                    <p className="text-[#1C3557]/80 leading-relaxed">Use the <Link to="/analyser/mobile" className="text-[#C9A84C] font-semibold hover:underline">Mobile Analyser</Link>. It compares the number's vibration with your birth chart and flags misalignments.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#1C3557] mb-2">Business owner or founder?</h4>
+                    <p className="text-[#1C3557]/80 leading-relaxed">Start with the <Link to="/brand-auditor" className="text-[#C9A84C] font-semibold hover:underline">Brand Auditor</Link> — it audits your brand name, tagline, industry fit and logo colours in one report.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#1C3557] mb-2">Planning a marriage or partnership?</h4>
+                    <p className="text-[#1C3557]/80 leading-relaxed">The <Link to="/compatibility" className="text-[#C9A84C] font-semibold hover:underline">Compatibility Calculator</Link> scores four number interactions between two people and produces an overall harmony percentage.</p>
+                  </div>
+                </div>
+              </section>
             </div>
           </motion.div>
         ) : (

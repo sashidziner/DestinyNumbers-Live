@@ -7,8 +7,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function ServicesPage() {
   useSEO({
-    title: 'Our Services | Numerology, Vastu, Tarot & Astrology Consultations',
-    description: 'Complete list of services from Destiny Numbers: numerology, Vastu consultations, Nadi astrology, tarot readings, Reiki, gemstone guidance and more.',
+    title: 'Numerology, Astrology & Vastu Services | Destiny Numbers',
+    description: 'Explore all numerology, astrology, Vastu and healing services offered by Dr. Arun Poovaiah. Book a consultation in Bangalore or online.',
     keywords: 'numerology services, vastu consultation, tarot reading, nadi astrology services, reiki bangalore, spiritual guidance',
   });
   const navigate = useNavigate();

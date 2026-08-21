@@ -24,8 +24,8 @@ interface Chakra {
 
 export default function ChakraBalancing() {
   useSEO({
-    title: 'Chakra Balancing | Restore Energy & Well-Being',
-    description: 'Chakra balancing sessions to restore your body\'s seven energy centres. Feel grounded, clear and connected through personalised energy healing.',
+    title: 'Chakra Balancing Sessions | Destiny Numbers Bangalore',
+    description: 'Restore energy flow and inner balance with professional chakra balancing sessions. Book a consultation with Dr. Arun Poovaiah.',
     keywords: 'chakra balancing, chakra healing, energy healing bangalore, seven chakras alignment, spiritual healing, muladhara sahasrara',
   });
   const chakrasSectionRef = useRef<HTMLDivElement>(null);

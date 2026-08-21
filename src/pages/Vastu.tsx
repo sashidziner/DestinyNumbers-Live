@@ -14,8 +14,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function Vastu() {
   useSEO({
-    title: 'Vastu Consultation | Traditional Vastu Shastra for Home & Business',
-    description: 'Expert Vastu Shastra consultations for homes, offices and land — attract prosperity, harmony and peace with guidance from Dr. Arun Poovaiah.',
+    title: 'Vastu Consultation Bangalore | Destiny Numbers',
+    description: 'Expert Vastu consultation for homes to improve health, wealth and harmony. Book a Vastu consultation with Dr. Arun Poovaiah in Bangalore.',
     keywords: 'vastu consultation, vastu shastra, home vastu, office vastu, vastu consultant bangalore, dr arun poovaiah vastu, vastu for house',
   });
   const roomPlacements = [
@@ -97,7 +97,7 @@ export default function Vastu() {
             Book a Home Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
           </Link>
           <a 
-            href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Home%20Vastu%20Consultation.%20I'm%20sharing%20my%20floor%20plan."
+            href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Home%20Vastu%20Consultation.%20I'm%20sharing%20my%20floor%20plan."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"
@@ -244,7 +244,7 @@ export default function Vastu() {
                 Book Your Home Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
               </Link>
               <a 
-                href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Home%20Vastu%20Consultation.%20I'm%20sharing%20my%20floor%20plan."
+                href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Home%20Vastu%20Consultation.%20I'm%20sharing%20my%20floor%20plan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"

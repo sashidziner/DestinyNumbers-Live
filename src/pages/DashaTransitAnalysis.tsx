@@ -22,8 +22,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function DashaTransitAnalysis() {
   useSEO({
-    title: 'Dasha & Transit Analysis | Timing of Life Events',
-    description: 'Vedic dasha and planetary transit analysis to time career, marriage, finance and health events. Personal guidance by Dr. Arun Poovaiah.',
+    title: 'Dasha & Planetary Transit Analysis | Destiny Numbers',
+    description: 'Understand upcoming life events through Dasha and transit analysis. Expert Vedic astrology consultation by Dr. Arun Poovaiah, Bangalore.',
     keywords: 'dasha analysis, transit analysis, mahadasha antardasha, vedic transits, planetary timing, jyotish predictions, gochar',
   });
   const dashaLevels = [

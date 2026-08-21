@@ -21,8 +21,8 @@ interface CrystalRow {
 
 export default function CrystalReiki() {
   useSEO({
-    title: 'Crystal Reiki Healing | Reiki Amplified With Sacred Crystals',
-    description: 'Crystal reiki blends reiki energy with the healing frequencies of sacred crystals for a deeper, more targeted healing experience.',
+    title: 'Crystal Reiki Healing Sessions | Destiny Numbers',
+    description: 'Combine crystal energy with Reiki healing to restore balance and vitality. Book a crystal Reiki session with Destiny Numbers, Bangalore.',
     keywords: 'crystal reiki, crystal healing, reiki with crystals, chakra crystal healing, gemstone reiki, crystal energy therapy',
   });
   const howItWorksRef = useRef<HTMLDivElement>(null);

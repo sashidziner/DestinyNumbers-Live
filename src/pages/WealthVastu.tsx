@@ -14,8 +14,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function WealthVastu() {
   useSEO({
-    title: 'Wealth Vastu | Vastu Tips to Attract Prosperity',
-    description: 'Wealth Vastu consultation — align your home or office to attract financial abundance, save more and grow your wealth.',
+    title: 'Wealth Vastu Tips & Consultation | Destiny Numbers',
+    description: 'Align your space with Vastu principles to attract wealth and financial growth. Wealth-focused Vastu consultation by Dr. Arun Poovaiah.',
     keywords: 'wealth vastu, money vastu, prosperity vastu, financial abundance vastu, wealth corner vastu, vastu for money',
   });
   const wealthKillers = [
@@ -121,7 +121,7 @@ export default function WealthVastu() {
             Book a Wealth Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
           </Link>
           <a 
-            href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Wealth%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
+            href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Wealth%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"
@@ -261,7 +261,7 @@ export default function WealthVastu() {
                 Book Your Wealth Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
               </Link>
               <a 
-                href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Wealth%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
+                href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Wealth%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"

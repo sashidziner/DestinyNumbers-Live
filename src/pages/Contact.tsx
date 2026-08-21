@@ -29,8 +29,8 @@ function validate(formData: typeof EMPTY_FORM) {
 
 export default function ContactPage() {
   useSEO({
-    title: 'Contact Dr. Arun Poovaiah | Destiny Numbers Bangalore',
-    description: 'Get in touch with Destiny Numbers, Bangalore. Book a numerology, Vastu or astrology consultation with Dr. Arun Poovaiah — call, WhatsApp or send us a message.',
+    title: 'Contact Destiny Numbers | Book a Consultation',
+    description: 'Get in touch with Dr. Arun Poovaiah for numerology, astrology or Vastu consultations in Bangalore. Book your session today.',
     keywords: 'contact destiny numbers, book numerology consultation bangalore, dr arun poovaiah contact, vastu consultation booking',
   });
   const [formData, setFormData] = useState(EMPTY_FORM);
@@ -89,7 +89,7 @@ export default function ContactPage() {
             <div className="space-y-8 mb-20">
               {[
                 { icon: Mail,   label: 'Secure Email',    value: 'support@destinynumbers.in' },
-                { icon: Phone,  label: 'Direct WhatsApp', value: '+91 74063 57511' },
+                { icon: Phone,  label: 'Direct WhatsApp', value: '+91 89712 25552' },
                 { icon: MapPin, label: 'Global Hub',      value: 'Bangalore • Virtual Consultancy' }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-6 group">
@@ -218,6 +218,28 @@ export default function ContactPage() {
             )}
           </motion.div>
         </div>
+
+        {/* SEO Content */}
+        <section className="mt-20 pt-12 border-t border-[#E0D5C0] max-w-3xl mx-auto">
+          <h2 className="text-3xl font-display italic text-mystic-navy mb-6">Get in Touch With Destiny Numbers</h2>
+          <p className="text-mystic-navy/80 leading-relaxed mb-4">
+            Whether you are looking for a personal numerology reading, a Vastu audit of your home or office, a business-brand naming session, or a full Nadi and horoscope analysis, our team at Destiny Numbers is available to help. Dr. Arun Poovaiah personally reviews every enquiry and assigns the right specialist based on the complexity of your question.
+          </p>
+          <p className="text-mystic-navy/80 leading-relaxed mb-4">
+            The fastest way to reach us is <strong>WhatsApp at +91 89712 25552</strong> — we typically respond within a few working hours. Email queries to <strong>support@destinynumbers.in</strong> are answered within 24 hours. If your matter is time-sensitive (a name-change deadline, a launch date, or an urgent Vastu concern), please mention that in your message so we can prioritise it.
+          </p>
+          <p className="text-mystic-navy/80 leading-relaxed mb-4">
+            We are based in <strong>Bangalore, India</strong>, and serve clients across India and internationally through virtual consultation. Corporate visits, on-site Vastu audits, and in-person sessions are available on prior appointment. For a fixed-price package with pre-defined deliverables, review our <Link to="/consultation" className="text-[#C9A84C] font-semibold hover:underline">Consultation Plans</Link> or browse the <Link to="/services" className="text-[#C9A84C] font-semibold hover:underline">full list of services</Link>.
+          </p>
+
+          <h3 className="text-2xl font-display italic text-mystic-navy mt-10 mb-4">Consultation Modes</h3>
+          <ul className="space-y-3 text-mystic-navy/80 leading-relaxed list-disc pl-6">
+            <li><strong>Phone Call:</strong> best for urgent, focused questions with a fast turnaround.</li>
+            <li><strong>Video Consultation:</strong> best for chart-walkthroughs and Vastu plan reviews.</li>
+            <li><strong>WhatsApp Chat:</strong> best for follow-ups and short remedy clarifications.</li>
+            <li><strong>In-person (Bangalore):</strong> best for full-day sessions and on-site Vastu.</li>
+          </ul>
+        </section>
 
         {/* Quick Links */}
         <div className="mt-24 pt-12 border-t border-[#E0D5C0] text-center">

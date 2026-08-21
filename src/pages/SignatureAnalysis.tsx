@@ -17,8 +17,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function SignatureAnalysis() {
   useSEO({
-    title: 'Signature Analysis | Grapho-Numerology by Dr. Arun Poovaiah',
-    description: 'Signature analysis rooted in graphology and numerology. Refine your signature to project confidence, success and financial growth.',
+    title: 'Signature Analysis & Correction | Destiny Numbers',
+    description: 'Get your signature analysed and corrected for better luck, confidence and career growth. Numerology-based signature consultation in Bangalore.',
     keywords: 'signature analysis, graphology signature, numerology signature, signature correction, lucky signature design, signature reading',
   });
   const shifts = [

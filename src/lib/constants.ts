@@ -427,13 +427,13 @@ export const BRAND_DATA = {
   profilePhoto: imgUrl('/assets/img/arun-profile.jpg'),
   fallbackPhoto: imgUrl('/assets/img/fallback-photo.jpg'),
   email: "support@destinynumber.in",
-  phone: "+91 74063 57511",
+  phone: "+91 89712 25552",
   location: "Bangalore, India",
   philosophy: "At Destiny Numbers, we believe destiny is pre-defined through cosmic patterns, planetary movements, and numerical vibrations. While life follows a destined path, awareness helps us recognize the right timing, make better decisions, and align ourselves with opportunities, relationships, health, career, and financial growth."
 };
 
 export const SOCIAL_LINKS = [
-  { icon: Instagram, url: '#', label: 'Instagram' },
+  { icon: Instagram, url: 'https://www.instagram.com/destinynumbers.a/', label: 'Instagram' },
   { icon: Facebook, url: 'https://www.facebook.com/profile.php?id=100064678042592', label: 'Facebook' },
   { icon: Youtube, url: 'https://www.youtube.com/@destinynumbers5076', label: 'Youtube' },
   { icon: Linkedin, url: 'https://www.linkedin.com/in/destiny-numbers/', label: 'Linkedin' }

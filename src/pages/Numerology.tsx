@@ -22,8 +22,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function Numerology() {
   useSEO({
-    title: 'Numerology Consultation | Vedic, Pythagorean & Lo Shu Systems',
-    description: 'Discover the power of numbers with expert numerology consultations — Vedic, Pythagorean and Lo Shu systems by Dr. Arun Poovaiah, Bangalore.',
+    title: 'Numerology Consultation Bangalore | Dr. Arun Poovaiah',
+    description: 'Personalised numerology consultation for career, marriage, finance and life decisions. Book a session with Bangalore numerologist Dr. Arun Poovaiah.',
     keywords: 'numerology consultation, vedic numerology, pythagorean numerology, lo shu grid, dr arun poovaiah numerology, chaldean numerology',
   });
   return (

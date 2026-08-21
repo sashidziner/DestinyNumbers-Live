@@ -39,8 +39,8 @@ interface Modality {
 
 export default function SpiritualAlignment() {
   useSEO({
-    title: 'Spiritual Alignment | Reconnect With Your Higher Self',
-    description: 'Spiritual alignment sessions with Dr. Arun Poovaiah — reconnect with your purpose, calm your mind and align mind, body and spirit.',
+    title: 'Spiritual Alignment Healing | Destiny Numbers Bangalore',
+    description: 'Realign your mind, body and spirit through guided spiritual alignment sessions. Personalised healing consultation by Dr. Arun Poovaiah.',
     keywords: 'spiritual alignment, spiritual healing, mind body spirit, spiritual guidance bangalore, dr arun poovaiah spiritual, self alignment',
   });
   const stepsSectionRef = useRef<HTMLDivElement>(null);

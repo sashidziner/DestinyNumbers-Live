@@ -20,8 +20,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function MarriageMatching() {
   useSEO({
-    title: 'Marriage Matching | Numerology & Kundli Compatibility',
-    description: 'Marriage matching using numerology and Vedic Kundli — Ashta Kuta, Gun Milan and compatibility scores. Get expert guidance from Dr. Arun Poovaiah.',
+    title: 'Marriage Matching by Astrology & Numerology | Destiny Numbers',
+    description: 'Check marriage compatibility using Vedic astrology and numerology together. Expert marriage matching consultation by Dr. Arun Poovaiah.',
     keywords: 'marriage matching, kundli matching, gun milan, ashta kuta, numerology marriage compatibility, horoscope matching bangalore',
   });
   const [activeKutaIdx, setActiveKutaIdx] = useState<number>(0);

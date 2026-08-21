@@ -6,8 +6,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function AboutPage() {
   useSEO({
-    title: 'About Dr. Arun Poovaiah | Numerologist, Vastu & Nadi Astrologer',
-    description: 'Meet Dr. Arun Poovaiah — Bangalore-based numerologist, Vastu consultant and Nadi astrologer guiding clients on career, business and personal destiny.',
+    title: 'About Dr. Arun Poovaiah | Numerologist & Astrologer',
+    description: 'Meet Dr. Arun Poovaiah, Bangalore-based numerologist, Vastu consultant and astrologer with 25+ years of creative and spiritual practice experience.',
     keywords: 'about dr arun poovaiah, bangalore numerologist, nadi astrologer, vastu expert, destiny numbers founder',
   });
   const { data, loading } = useCMS();

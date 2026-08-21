@@ -35,8 +35,8 @@ interface ClearingTool {
 
 export default function AuraCleansing() {
   useSEO({
-    title: 'Aura Cleansing | Clear Negative Energy & Restore Balance',
-    description: 'Aura cleansing sessions to release stagnant, negative energy and restore your natural glow, focus and vitality.',
+    title: 'Aura Cleansing & Energy Healing | Destiny Numbers',
+    description: 'Clear negative energy and restore your aura with expert aura cleansing sessions. Book a healing consultation with Destiny Numbers.',
     keywords: 'aura cleansing, aura healing, energy cleansing, negative energy removal, aura reading bangalore, etheric layer',
   });
   const auraSectionRef = useRef<HTMLDivElement>(null);

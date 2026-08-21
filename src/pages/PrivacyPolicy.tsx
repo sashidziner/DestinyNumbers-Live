@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
           <p>
             If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, 
             for the continued collection, use or disclosure of your information, at anytime, by contacting 
-            us at <strong>91-7406357511</strong> or mailing us at: <strong>info@destinynumbers.in</strong>.
+            us at <strong>91-8971225552</strong> or mailing us at: <strong>info@destinynumbers.in</strong>.
           </p>
         </div>
 
@@ -212,7 +212,7 @@ export default function PrivacyPolicy() {
           <p>
             If you would like to: access, correct, amend or delete any personal information we have about 
             you, register a complaint, or simply want more information contact our Privacy Compliance 
-            Officer at <strong>91-7406357511</strong> or by mail at <strong>info@destinynumbers.in</strong>.
+            Officer at <strong>91-8971225552</strong> or by mail at <strong>info@destinynumbers.in</strong>.
           </p>
         </div>
 

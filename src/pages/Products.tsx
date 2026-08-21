@@ -89,8 +89,8 @@ const PRODUCT_GALLERY_EXTRAS: Record<string, string[]> = {
 
 export default function Products() {
   useSEO({
-    title: 'Numerology & Spiritual Products | Destiny Numbers Store',
-    description: 'Shop curated spiritual and numerology-aligned products: yantras, crystals, bracelets and Vastu items, chosen for your energy by Dr. Arun Poovaiah.',
+    title: 'Numerology & Astrology Products | Destiny Numbers',
+    description: 'Shop numerology and astrology products curated by Dr. Arun Poovaiah to support your spiritual and personal growth journey.',
     keywords: 'numerology products, yantras online, crystals, vastu products, spiritual store bangalore, destiny numbers store, gemstone bracelets',
   });
   const location = useLocation();
@@ -770,7 +770,12 @@ export default function Products() {
       </AnimatePresence>
 
       <div className="max-w-[1140px] mx-auto px-6 py-12">
-        
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-display italic text-[#1C3557] mb-3">Browse Sacred Products by Category</h2>
+          <p className="text-sm text-[#1C3557]/70 max-w-2xl mx-auto italic">
+            Every yantra, gemstone, bracelet and vastu remedy on this page is hand-selected and energized under specific nakshatra timings. Filter by category, sort by price, and add pieces that resonate with your current life phase.
+          </p>
+        </div>
 
         {/* Controls Bar: Category Filters & Responsive Sorting & Counts */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 pb-6 border-b border-[#E8E2D8] text-sm font-sans" id="products-controls-panel">

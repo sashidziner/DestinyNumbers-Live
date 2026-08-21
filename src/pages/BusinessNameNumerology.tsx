@@ -20,8 +20,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function BusinessNameNumerology() {
   useSEO({
-    title: 'Business Name Numerology | Lucky Name for Your Company',
-    description: 'Pick a lucky, vibrant business name aligned to numerology. Dr. Arun Poovaiah helps brands choose names that attract growth, wealth and stability.',
+    title: 'Business Name Numerology Services | Destiny Numbers',
+    description: 'Choose or correct your business name using numerology for growth and profitability. Consult Dr. Arun Poovaiah for business name analysis.',
     keywords: 'business name numerology, lucky business name, company name numerology, brand numerology, business name correction, startup name',
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);

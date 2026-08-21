@@ -24,8 +24,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function MobileNumerologyLanding() {
   useSEO({
-    title: 'Mobile Number Numerology | Find Your Lucky Number',
-    description: 'Discover the power of your mobile number. Get a free numerology analysis of your phone number and see if it supports your growth, wealth and success.',
+    title: 'Mobile Number Numerology | Destiny Numbers Bangalore',
+    description: 'Discover what your mobile number means for your career, finances and relationships. Expert mobile numerology analysis by Dr. Arun Poovaiah.',
     keywords: 'mobile number numerology, lucky mobile number, phone number analysis, mobile numerology calculator, mobile number check',
   });
   const calculationSteps = [

@@ -33,8 +33,8 @@ import { useSEO } from "../lib/useSEO";
 
 export default function MobileAnalyser() {
   useSEO({
-    title: 'Free Mobile Number Analyser | Numerology Analysis',
-    description: 'Analyse any mobile number for its numerological energy. Free tool by Destiny Numbers — instant results with insights for career, wealth and relationships.',
+    title: 'Mobile Number Analyser Tool | Destiny Numbers',
+    description: 'Analyse your mobile number\'s numerological impact on communication, luck and success. Free instant mobile number analyser.',
     keywords: 'mobile number analyser, free mobile numerology, phone number checker, lucky number analysis, mobile numerology tool',
   });
   const [firstName, setFirstName] = useState("");
@@ -101,7 +101,7 @@ export default function MobileAnalyser() {
           className="text-center mb-10"
         >
           <div className="mb-4">
-            <h2
+            <h1
               style={{
                 fontFamily: 'var(--font-serif)',
                 fontSize: "24px",
@@ -114,7 +114,7 @@ export default function MobileAnalyser() {
               }}
             >
               Mobile <span style={{ color: "#C9A84C" }}>Analyser</span>
-            </h2>
+            </h1>
             <div
               style={{
                 width: "60px",
@@ -727,6 +727,51 @@ export default function MobileAnalyser() {
             )}
           </AnimatePresence>
         </div>
+
+        {/* SEO Content */}
+        <section className="mt-24 pt-16 border-t border-royal-gold/20">
+          <div className="max-w-3xl mx-auto prose prose-slate">
+            <h2 className="text-3xl font-display italic text-mystic-navy mb-6">About the Mobile Number Analyser</h2>
+            <p className="text-mystic-navy/80 leading-relaxed mb-4">
+              Every mobile number is a sequence of digits, and in numerology every digit carries a distinct vibration linked to a planet. Because you interact with your phone number dozens of times a day — sharing it, dialling it, receiving calls and money to it — its cumulative frequency has a real influence on the results, opportunities and setbacks you experience.
+            </p>
+            <p className="text-mystic-navy/80 leading-relaxed mb-4">
+              This free mobile number analyser reduces your number to its core vibrational total, examines the balance of planetary energies within it, checks compatibility with your birth date, and flags problematic combinations that could be blocking wealth, career growth or peace of mind. Enter up to two numbers along with your name and date of birth for a full multi-layer report.
+            </p>
+            <p className="text-mystic-navy/80 leading-relaxed mb-4">
+              A well-tuned mobile number can act as a silent amplifier for your intentions. A mis-aligned one can quietly drain your energy — repeated calls that never convert, deals that fall through at the last step, or health issues that resist obvious explanation. The report generated here is diagnostic; if you need a corrective number recommendation, our expert numerology team is here to help.
+            </p>
+
+            <h3 className="text-2xl font-display italic text-mystic-navy mt-10 mb-4">Common Questions</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bold text-mystic-navy mb-2">Do I need to enter my real mobile number?</h4>
+                <p className="text-mystic-navy/80 leading-relaxed">For the most accurate reading, yes — the numbers you actually use every day are the ones affecting your energy field.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-mystic-navy mb-2">How is a mobile number's numerology calculated?</h4>
+                <p className="text-mystic-navy/80 leading-relaxed">We reduce all digits of the number to a single-digit total, then map that total to its ruling planet and analyse the count of each planetary digit inside the sequence.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-mystic-navy mb-2">Can changing my number really improve my luck?</h4>
+                <p className="text-mystic-navy/80 leading-relaxed">Numerology practitioners consistently see improvement in business flow, communication clarity and general momentum after clients switch to a compatible number. Results depend on aligning the number with your birth chart, not just any "lucky" combination.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-mystic-navy mb-2">Is this analyser free forever?</h4>
+                <p className="text-mystic-navy/80 leading-relaxed">Yes, the analyser is free to use as many times as you like. Only the deep personal consultation and number correction service is paid.</p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-display italic text-mystic-navy mt-10 mb-4">Related Tools</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/mobile-numerology" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">Mobile Numerology</Link>
+              <Link to="/calculator" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">Numerology Calculator</Link>
+              <Link to="/services/name-correction" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">Name Correction</Link>
+              <Link to="/tools" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">All Free Tools</Link>
+              <Link to="/consultation" className="px-5 py-2 bg-mystic-navy text-white text-xs font-bold tracking-widest uppercase hover:bg-royal-gold transition-all">Book a Consultation</Link>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

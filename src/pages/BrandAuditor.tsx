@@ -54,8 +54,8 @@ const STEPS = [
 
 export default function BrandAuditor() {
   useSEO({
-    title: 'Brand Numerology Auditor | Free Brand Name Analysis',
-    description: 'Audit your brand name with numerology. Free tool to reveal your brand\'s numeric strength, market fit and areas to boost visibility and revenue.',
+    title: 'Business Brand Name Numerology Audit | Destiny Numbers',
+    description: 'Audit your brand or business name for numerological alignment with success. Free brand numerology auditor by Destiny Numbers Bangalore.',
     keywords: 'brand numerology auditor, brand name analysis, business name audit, brand naming numerology, free brand audit, marketing numerology',
   });
   const [step, setStep] = useState(0);
@@ -360,7 +360,7 @@ export default function BrandAuditor() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <div className="mb-4">
-            <h2 style={{
+            <h1 style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '24px',
               fontWeight: 400,
@@ -371,7 +371,7 @@ export default function BrandAuditor() {
               textAlign: 'center'
             }}>
               Brand <span style={{ color: '#C9A84C' }}>Auditor</span>
-            </h2>
+            </h1>
             <div style={{ width: '60px', height: '1px', background: '#C9A84C', margin: '4px auto 0' }}></div>
           </div>
           
@@ -636,6 +636,49 @@ export default function BrandAuditor() {
             ))}
           </div>
         </motion.div>
+
+        {/* SEO Content */}
+        <section className="mt-24 pt-16 border-t border-royal-gold/20 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-display italic text-mystic-navy mb-6">About the Brand Numerology Auditor</h2>
+          <p className="text-mystic-navy/80 leading-relaxed mb-4">
+            A brand name is not just a label — it is a vibration that the market experiences every time it is spoken, typed, shared or searched. Numerology quantifies that vibration. This free brand auditor takes your brand name, tagline, launch date, industry, logo colour palette and target audience, and runs them through the Pythagorean and Chaldean numerology systems to reveal how the market will actually receive your brand.
+          </p>
+          <p className="text-mystic-navy/80 leading-relaxed mb-4">
+            The audit produces a Brand Number, a compatibility score with your industry, and a colour-psychology alignment report. Together these signals show whether your brand is set up to attract customers effortlessly or whether it is silently working against you. Founders, marketers, and consultants use this tool before naming a company, launching a new product, or before a rebrand.
+          </p>
+          <p className="text-mystic-navy/80 leading-relaxed mb-4">
+            If the audit surfaces issues, the fix is usually a small spelling change, a repositioned tagline, or a colour adjustment — not a full rebrand. For an in-depth brand numerology consultation, including corrected name suggestions and a Vastu-aligned launch date, please <Link to="/consultation" className="text-royal-gold font-semibold hover:underline">book a private consultation</Link>.
+          </p>
+
+          <h3 className="text-2xl font-display italic text-mystic-navy mt-10 mb-4">Common Questions</h3>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-bold text-mystic-navy mb-2">Why does a brand name's numerology matter?</h4>
+              <p className="text-mystic-navy/80 leading-relaxed">Because your brand name is repeated by customers, staff and press thousands of times a day. That repetition amplifies its underlying vibration into a measurable business force — either as tailwind or friction.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-mystic-navy mb-2">Does this work for existing brands or only new ones?</h4>
+              <p className="text-mystic-navy/80 leading-relaxed">Both. For new brands it prevents costly re-branding later. For existing brands it explains why growth has plateaued and points to small tweaks that restore momentum.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-mystic-navy mb-2">How does industry alignment work?</h4>
+              <p className="text-mystic-navy/80 leading-relaxed">Every industry has ruling planetary vibrations. A number-1 brand thrives in leadership sectors; a number-3 brand suits creative or media industries; a number-6 brand fits hospitality, beauty and wellness. Mismatches drain revenue.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-mystic-navy mb-2">What about logo colours?</h4>
+              <p className="text-mystic-navy/80 leading-relaxed">Colours carry frequency too. Your logo palette should reinforce — not fight — your brand number. The auditor cross-checks your colours against the ruling planet for a coherence score.</p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-display italic text-mystic-navy mt-10 mb-4">Related Services</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/services/business-name-numerology" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">Business Name Numerology</Link>
+            <Link to="/services/name-correction" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">Name Correction</Link>
+            <Link to="/services/commercial-vastu" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">Commercial Vastu</Link>
+            <Link to="/tools" className="px-5 py-2 border border-mystic-navy/20 text-mystic-navy text-xs font-bold tracking-widest uppercase hover:bg-royal-gold hover:text-white hover:border-transparent transition-all">All Free Tools</Link>
+            <Link to="/consultation" className="px-5 py-2 bg-mystic-navy text-white text-xs font-bold tracking-widest uppercase hover:bg-royal-gold transition-all">Book a Consultation</Link>
+          </div>
+        </section>
       </div>
     </div>
   );

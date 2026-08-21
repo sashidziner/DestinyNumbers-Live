@@ -20,8 +20,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function AncientWisdom() {
   useSEO({
-    title: 'Ancient Wisdom | Nadi Astrology & Sacred Vedic Sciences',
-    description: 'Explore ancient wisdom — Nadi astrology, Vedic sciences and timeless spiritual guidance for the modern seeker with Dr. Arun Poovaiah.',
+    title: 'Ancient Vedic Wisdom & Astrology | Destiny Numbers',
+    description: 'Explore ancient Vedic astrological wisdom applied to modern life challenges. Consultations by Dr. Arun Poovaiah in Bangalore.',
     keywords: 'nadi astrology, ancient wisdom, vedic sciences, sacred knowledge, spiritual guidance bangalore, palm leaf astrology',
   });
   const systems = [
@@ -159,6 +159,20 @@ export default function AncientWisdom() {
           </Link>
           <div className="mt-8 text-[10px] font-black uppercase tracking-[0.4em] text-[#C9A84C]">Ancient Knowledge. Modern Clarity.</div>
         </footer>
+
+        {/* SEO Content */}
+        <section className="mt-24 pt-16 border-t border-[#C9A84C]/20 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-display italic text-[#1C3557] mb-6">The Ancient Wisdom Tradition</h2>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            The Ancient Wisdom stream at Destiny Numbers draws on the classical Vedic sciences — Jyotish (astrology), Vastu (spatial energy), Ayurveda (constitutional health) and Nadi (destiny-scroll reading). Rather than treating these as folklore, Dr. Arun Poovaiah applies them as precision systems: each houses its own logic, its own measurement units, and its own body of validated case results built up over centuries of practice.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            An Ancient Wisdom consultation is best for seekers who want to understand the karmic architecture behind repeating patterns in their life — recurring health issues, blocked wealth, difficult relationships, or a sense that their outer life doesn't match their inner potential. The reading identifies the root planetary and elemental causes and prescribes graded remedies: mantra, gemstone, Vastu correction, dietary tuning, or timing adjustment.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            If you'd like to explore related paths, see our <Link to="/services/horoscope" className="text-[#C9A84C] font-semibold hover:underline">Horoscope Analysis</Link>, <Link to="/services/dasha-transit" className="text-[#C9A84C] font-semibold hover:underline">Dasha & Transit Analysis</Link>, and <Link to="/services/gemini-sutras" className="text-[#C9A84C] font-semibold hover:underline">Gemini Sutras</Link>.
+          </p>
+        </section>
       </div>
     </div>
   );

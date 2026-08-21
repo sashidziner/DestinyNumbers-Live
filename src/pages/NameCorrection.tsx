@@ -19,8 +19,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function NameCorrection() {
   useSEO({
-    title: 'Name Correction by Numerology | Change Your Destiny',
-    description: 'Personal name correction based on numerology — align your name\'s vibration with your date of birth and destiny path. Expert guidance by Dr. Arun Poovaiah.',
+    title: 'Numerology Name Correction Services | Destiny Numbers',
+    description: 'Correct your name numerology to align with success, health and prosperity. Expert name correction consultation by Destiny Numbers Bangalore.',
     keywords: 'name correction numerology, lucky name change, numerological name correction, spelling correction, name change destiny numbers',
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);

@@ -20,8 +20,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function Tarot() {
   useSEO({
-    title: 'Tarot Reading Consultation | Personal & Deep Insights',
-    description: 'Professional tarot readings by Dr. Arun Poovaiah — clarity on love, career, finances and life direction with the wisdom of the tarot.',
+    title: 'Tarot Card Reading Bangalore | Destiny Numbers',
+    description: 'Get clarity on love, career and life decisions with professional tarot reading. Book a session with Dr. Arun Poovaiah in Bangalore.',
     keywords: 'tarot reading, tarot consultation bangalore, love tarot, career tarot, dr arun poovaiah tarot, professional tarot reader',
   });
   const benefits = [

@@ -14,8 +14,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function IndustrialVastu() {
   useSEO({
-    title: 'Industrial Vastu Consultation | Factories & Warehouses',
-    description: 'Industrial Vastu for factories, warehouses and manufacturing units. Improve output, safety and profits with expert Vastu correction.',
+    title: 'Industrial Vastu Consultation | Destiny Numbers',
+    description: 'Vastu guidance for factories and industrial units to improve efficiency and prosperity. Consult Dr. Arun Poovaiah for industrial Vastu.',
     keywords: 'industrial vastu, factory vastu, warehouse vastu, manufacturing unit vastu, industrial vastu consultant, plant vastu',
   });
   const diffPoints = [
@@ -126,7 +126,7 @@ export default function IndustrialVastu() {
             Book Industrial Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
           </Link>
           <a 
-            href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%2520an%20Industrial%20Vastu%20Consultation.%22%20I'm%20sharing%20my%2520factory%20floor%20plan."
+            href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%2520an%20Industrial%20Vastu%20Consultation.%22%20I'm%20sharing%20my%2520factory%20floor%20plan."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"
@@ -243,7 +243,7 @@ export default function IndustrialVastu() {
                 Book Industrial Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
               </Link>
               <a 
-                href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20an%20Industrial%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20factory%20plan."
+                href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20an%20Industrial%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20factory%20plan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"

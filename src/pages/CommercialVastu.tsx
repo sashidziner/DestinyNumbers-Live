@@ -14,8 +14,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function CommercialVastu() {
   useSEO({
-    title: 'Commercial Vastu Consultation | Shops, Showrooms & Retail',
-    description: 'Commercial Vastu consultation for shops, showrooms, restaurants and retail spaces. Attract customers and boost turnover with the right layout.',
+    title: 'Commercial Vastu Services | Destiny Numbers Bangalore',
+    description: 'Vastu consultation for shops, showrooms and commercial spaces to boost business growth. Expert commercial Vastu analysis by Destiny Numbers.',
     keywords: 'commercial vastu, shop vastu, showroom vastu, retail vastu, restaurant vastu bangalore, business vastu',
   });
   const customBenefits = [
@@ -65,7 +65,7 @@ export default function CommercialVastu() {
             Book Commercial Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
           </Link>
           <a 
-            href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Commercial%20Vastu%20Consultation.%20I'm%20sharing%20my%20floor%20plan."
+            href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Commercial%20Vastu%20Consultation.%20I'm%20sharing%20my%20floor%20plan."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"
@@ -260,7 +260,7 @@ export default function CommercialVastu() {
                 Book Commercial Vastu Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
               </Link>
               <a 
-                href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Commercial%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
+                href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Commercial%20Vastu%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"

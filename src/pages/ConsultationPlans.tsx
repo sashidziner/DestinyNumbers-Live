@@ -122,8 +122,8 @@ const PLANS: Plan[] = [
 
 export function ConsultationPlans() {
   useSEO({
-    title: 'Consultation Plans | Book Numerology & Vastu Sessions',
-    description: 'Choose the right consultation plan with Dr. Arun Poovaiah — one-time, comprehensive and premium packages for numerology, Vastu and astrology guidance.',
+    title: 'Consultation Plans & Pricing | Destiny Numbers',
+    description: 'Compare numerology, astrology and Vastu consultation plans. Choose the right session with Dr. Arun Poovaiah for your needs and budget.',
     keywords: 'numerology consultation, vastu consultation packages, astrology consultation plans, book destiny numbers session, consultation pricing',
   });
   const { data } = useCMS();
@@ -350,8 +350,22 @@ export function ConsultationPlans() {
         </div>
       </section>
 
+      {/* About consultation plans (SEO) */}
+      <section className="max-w-3xl mx-auto px-6 mt-24 relative z-10">
+        <h2 className="text-2xl md:text-3xl font-display italic text-[#0d1b3e] mb-6 text-center">Which Consultation Plan Is Right For You?</h2>
+        <p className="text-[#0d1b3e]/80 leading-relaxed mb-4">
+          Every plan on this page bundles multiple consultation sessions with Dr. Arun Poovaiah and the Destiny Numbers team, spread over a defined service period so that you have expert guidance available during the moments that matter — a career decision, a business launch, a marriage discussion or a health scare. The plans differ by depth of analysis, number of sessions, and range of remedies included.
+        </p>
+        <p className="text-[#0d1b3e]/80 leading-relaxed mb-4">
+          <strong>Silver Moon</strong> is the right entry point for a single life question — a name-numerology reading, date-of-birth analysis, or a mobile-number check. <strong>Golden Star</strong> adds deeper Kundali analysis and Rin (karmic debt) remedies, making it the best value for most personal seekers. <strong>Diamond Galaxy</strong> and <strong>Platinum</strong> tiers add Vastu, aura, chakra, business logo, and wrist-watch analysis for people who want a full-spectrum energy audit of their life or business.
+        </p>
+        <p className="text-[#0d1b3e]/80 leading-relaxed mb-4">
+          If you are unsure which plan to pick, message us on WhatsApp with a short description of what you're looking to resolve — we will recommend the shortest plan that covers your goal. Payments are secure via Razorpay, and booking confirmation arrives within 24 hours. For a one-off custom scope not covered by any plan, <Link to="/contact" className="text-[#C9A84C] font-semibold hover:underline">contact us directly</Link>.
+        </p>
+      </section>
+
       {/* Explore Services */}
-      <section className="max-w-5xl mx-auto px-6 mt-24 relative z-10 text-center">
+      <section className="max-w-5xl mx-auto px-6 mt-16 relative z-10 text-center">
         <h2 className="text-2xl md:text-3xl font-display italic text-[#0d1b3e] mb-6">Explore related services</h2>
         <p className="text-[#0d1b3e]/70 text-sm italic mb-8 max-w-2xl mx-auto">
           Not sure which plan suits you? Browse our specialty consultations first.
@@ -397,7 +411,7 @@ export function ConsultationPlans() {
             <h4 className="text-[11px] tracking-widest font-black text-[#C9A84C] uppercase">Connect with us</h4>
             <div className="flex items-center gap-4 text-[#0d1b3e]/80 hover:text-[#0d1b3e] transition-colors">
               <Phone className="w-4 h-4 text-[#C9A84C]" />
-              <span className="text-[15px] font-bold">+91 74063 57511</span>
+              <span className="text-[15px] font-bold">+91 89712 25552</span>
             </div>
             <div className="flex items-center gap-4 text-[#0d1b3e]/80 hover:text-[#0d1b3e] transition-colors">
               <Send className="w-4 h-4 text-[#C9A84C]" />
@@ -527,7 +541,7 @@ export function ConsultationPlans() {
                       label="Mobile Number *"
                       value={formData.mobile}
                       onChange={val => setFormData({...formData, mobile: val})}
-                      placeholder="74063 57511"
+                      placeholder="89712 25552"
                       error={formData.mobile && formData.mobile.length < 10 ? "Valid mobile required" : ""}
                     />
                     <StandardEmailInput
@@ -616,7 +630,7 @@ export function ConsultationPlans() {
                     </p>
                     <div className="inline-flex items-center gap-4 px-8 py-5 rounded-none bg-[#C9A84C] text-[#0d1b3e] font-black tracking-widest text-[13px] mb-12">
                       <MessageCircle className="w-5 h-5" />
-                      Follow us on WhatsApp: +91 74063 57511
+                      Follow us on WhatsApp: +91 89712 25552
                     </div>
                     <div>
                        <button 

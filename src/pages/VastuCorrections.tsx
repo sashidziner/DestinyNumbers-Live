@@ -16,8 +16,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function VastuCorrections() {
   useSEO({
-    title: 'Vastu Corrections | Fix Vastu Doshas Without Demolition',
-    description: 'Practical Vastu corrections and remedies to fix Vastu doshas in existing structures — no demolition needed. Personalised guidance by Dr. Arun Poovaiah.',
+    title: 'Vastu Dosha Corrections & Remedies | Destiny Numbers',
+    description: 'Practical Vastu correction remedies for existing homes and offices without demolition. Expert Vastu dosha solutions by Destiny Numbers.',
     keywords: 'vastu corrections, vastu remedies, vastu dosha correction, non demolition vastu, vastu shifts bangalore, vastu without breaking',
   });
   const commonDefects = [
@@ -100,7 +100,7 @@ export default function VastuCorrections() {
             Book a Vastu Correction Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
           </Link>
           <a 
-            href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Vastu%20Correction%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
+            href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Vastu%20Correction%20Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"
@@ -258,7 +258,7 @@ export default function VastuCorrections() {
                 Book Your Vastu Correction Consultation <ArrowRight className="w-4 h-4 text-[#C9A84C]" />
               </Link>
               <a 
-                href="https://wa.me/917406357511?text=Hi%2C%20I'm%20interested%20in%20a%20Vastu%20Correction%2520Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
+                href="https://wa.me/918971225552?text=Hi%2C%20I'm%20interested%20in%20a%20Vastu%20Correction%2520Consultation.%22%20I'm%20sharing%20my%20floor%20plan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center px-8 py-3.5 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold tracking-widest text-[11px] uppercase shadow-sm transition-all gap-2 items-center cursor-pointer"

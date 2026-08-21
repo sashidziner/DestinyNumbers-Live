@@ -776,7 +776,7 @@ export function CTASection() {
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                </Link>
                <a 
-                 href="tel:+917406357511" 
+                 href="tel:+918971225552" 
                  className="px-16 py-7 border border-royal-gold/20 bg-white/5 text-warm-off-white font-sans font-black tracking-[0.3em] text-[12px] rounded-none hover:bg-royal-gold hover:text-mystic-navy transition-all backdrop-blur-md"
                >
                   Direct Concierge

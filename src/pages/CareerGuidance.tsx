@@ -17,8 +17,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function CareerGuidance() {
   useSEO({
-    title: 'Career Guidance | Numerology & Astrology-Backed Career Advice',
-    description: 'Choose the right career path using numerology and Vedic astrology. Personal career guidance sessions with Dr. Arun Poovaiah.',
+    title: 'Astrology Career Guidance | Destiny Numbers Bangalore',
+    description: 'Get career direction and decision clarity through astrology and numerology. Personalised career guidance consultation by Dr. Arun Poovaiah.',
     keywords: 'career guidance numerology, career astrology, best career for me, career consultation bangalore, dr arun poovaiah career, career prediction',
   });
   const [activePlanetIndex, setActivePlanetIndex] = useState<number>(0);

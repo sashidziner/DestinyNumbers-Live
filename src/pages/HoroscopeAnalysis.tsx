@@ -15,8 +15,8 @@ import { useSEO } from '../lib/useSEO';
 
 export default function HoroscopeAnalysis() {
   useSEO({
-    title: 'Horoscope Analysis | Personal Vedic Birth Chart Reading',
-    description: 'Detailed Vedic horoscope analysis by Dr. Arun Poovaiah — understand planetary influences, life themes and remedies from your birth chart.',
+    title: 'Horoscope Analysis & Reading | Destiny Numbers Bangalore',
+    description: 'Detailed Vedic horoscope analysis covering career, marriage, health and finance. Book a horoscope reading with Dr. Arun Poovaiah.',
     keywords: 'horoscope analysis, vedic astrology, birth chart reading, jyotish consultation, kundli analysis bangalore, nakshatra analysis',
   });
   const coverageItems = [
@@ -60,7 +60,7 @@ export default function HoroscopeAnalysis() {
             <div className="relative group">
               <div className="absolute inset-0 bg-[#C9A84C]/20 -rotate-3 group-hover:rotate-0 transition-transform" />
               <img 
-                src={imgUrl('/assets/img/svc-dasha-lg.jpg')} 
+                src={imgUrl('/assets/img/vedic.jpg')} 
                 alt="Astrology Chart" 
                 className="relative z-10 w-full h-[400px] object-cover grayscale border border-white/10 hover:grayscale-0 transition-all duration-700" 
               />
@@ -85,7 +85,7 @@ export default function HoroscopeAnalysis() {
 
         {/* Why Get Analysis */}
         <section className="mb-24 py-20 bg-[#1C3557] text-white p-12 md:p-20 relative overflow-hidden">
-           <div className="absolute inset-0 bg-[url(imgUrl('/assets/img/sacred-geometry.png')] opacity-5" />
+           <div className="absolute inset-0 bg-[url('/assets/img/sacred-geometry.png')] opacity-5" />
            <div className="relative z-10">
              <h2 className="text-3xl md:text-5xl font-display italic text-center mb-16 text-white">Why Analyze Your <span className="text-[#C9A84C]">Horoscope?</span></h2>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -127,6 +127,17 @@ export default function HoroscopeAnalysis() {
             <p className="mt-8 text-[10px] uppercase font-black tracking-[0.3em] text-[#C9A84C] opacity-60">Limited slots available monthly</p>
           </div>
         </motion.div>
+
+        {/* SEO Content */}
+        <section className="mt-24 pt-16 border-t border-[#C9A84C]/20 max-w-3xl mx-auto px-6">
+          <h2 className="text-3xl font-display italic text-[#1C3557] mb-6">About Vedic Horoscope Analysis</h2>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            A Vedic horoscope (Kundali or Janam Kundali) is a precise map of the sky at the exact moment and location of your birth. Every planet, every house and every nakshatra position in that map has a measurable influence on the direction of your career, relationships, wealth, health and spiritual growth. A trained astrologer reads this map to identify strong and weak areas, karmic residues from past lives, and the timing windows when specific life events are most likely to unfold.
+          </p>
+          <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+            At Destiny Numbers, horoscope analysis combines classical Parashari astrology with Nadi Jyotish and modern degree-based methods. The final report identifies your ascendant, moon sign, sun sign, dasha periods, doshas (afflictions), yogas (auspicious combinations), and provides remedies tuned to your specific chart — not generic advice. For related predictive timing analysis, explore our <Link to="/services/dasha-transit" className="text-[#C9A84C] font-semibold hover:underline">Dasha & Transit Analysis</Link>.
+          </p>
+        </section>
       </div>
     </div>
   );

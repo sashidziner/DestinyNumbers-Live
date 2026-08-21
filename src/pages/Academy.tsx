@@ -336,8 +336,8 @@ const ACADEMY_DATA: Record<string, CourseData> = {
 
 const Academy: React.FC = () => {
   useSEO({
-    title: 'Numerology & Astrology Academy | Learn From Dr. Arun Poovaiah',
-    description: 'Destiny Numbers Academy — structured courses on numerology, Vastu, tarot and Nadi astrology, taught by Dr. Arun Poovaiah in Bangalore.',
+    title: 'Numerology & Astrology Academy | Destiny Numbers',
+    description: 'Learn numerology, astrology and Vastu from Dr. Arun Poovaiah. Courses and training programs for aspiring practitioners in Bangalore.',
     keywords: 'numerology course, learn numerology, vastu course, tarot classes, nadi astrology training, destiny numbers academy, numerology certification',
   });
   const [activeTab, setActiveTab] = useState<string>('numerology');
@@ -606,6 +606,20 @@ const Academy: React.FC = () => {
           </div>
         </motion.div>
       </AnimatePresence>
+
+      {/* SEO Content */}
+      <section className="mt-24 pt-16 border-t border-[#C9A84C]/20 max-w-3xl mx-auto px-6 pb-16">
+        <h2 className="text-3xl font-display italic text-[#1C3557] mb-6">About Destiny Numbers Academy</h2>
+        <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+          Destiny Numbers Academy offers structured, module-based courses in numerology, Vedic astrology, tarot, Vastu and Bhrigu Nandi Nadi. Every course is taught personally by Dr. Arun Poovaiah and blends classical text with modern case-based practice. Students are trained not just to interpret charts, but to apply the systems in real-life scenarios — career, business, marriage, health and Vastu — with the confidence to work with paying clients by the end of the programme.
+        </p>
+        <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+          Courses run in cohort format with live sessions, recorded modules for revision, curated case studies, and one-on-one mentorship. Certification is granted on successful completion of the final case project. Ideal for aspiring consultants, wellness practitioners, HR professionals, family-office advisors, and self-taught seekers who want a formal grounding in these sciences.
+        </p>
+        <p className="text-[#1C3557]/80 leading-relaxed mb-4">
+          For upcoming batch dates, fee details and personalised course selection guidance, please <Link to="/contact" className="text-[#C9A84C] font-semibold hover:underline">contact us</Link>. To first experience Dr. Arun's approach, browse our <Link to="/services" className="text-[#C9A84C] font-semibold hover:underline">consultation services</Link> or try one of the <Link to="/tools" className="text-[#C9A84C] font-semibold hover:underline">free tools</Link>.
+        </p>
+      </section>
     </div>
   );
 };
