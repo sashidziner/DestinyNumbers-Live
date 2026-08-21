@@ -37,6 +37,11 @@ set_exception_handler(function ($e) {
 });
 
 header('Content-Type: application/json');
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: SAMEORIGIN');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+header("Content-Security-Policy: default-src 'none'; frame-ancestors 'self'; base-uri 'none'");
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
@@ -48,7 +53,7 @@ $MAIL_TO   = 'arun.p@destinynumbers.in, arunart@gmail.com';
 $MAIL_FROM = 'noreply@destinynumbers.in'; // MUST be an address on this domain
 // ────────────────────────────────────────────────────────────────────────────
 
-// Debug: https://www.destinynumbers.in/demo/send-mail.php?debug=1
+// Debug: https://www.destinynumbers.in/send-mail.php?debug=1
 if (isset($_GET['debug'])) {
     echo json_encode([
         'php_version'     => PHP_VERSION,
@@ -61,7 +66,7 @@ if (isset($_GET['debug'])) {
     exit;
 }
 
-// View last errors: https://www.destinynumbers.in/demo/send-mail.php?viewlog=1
+// View last errors: https://www.destinynumbers.in/send-mail.php?viewlog=1
 if (isset($_GET['viewlog'])) {
     header('Content-Type: text/plain');
     $log = __DIR__ . '/mail-error.log';

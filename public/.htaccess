@@ -1,9 +1,25 @@
 Options -MultiViews
 RewriteEngine On
-RewriteBase /demo/
+RewriteBase /
+
+# --- Legacy: 301 redirect old /demo/* URLs to root ---
+RewriteRule ^demo/?$ / [R=301,L]
+RewriteRule ^demo/(.*)$ /$1 [R=301,L]
+
+# --- Canonicalization: force https + www (single 301, no chain) ---
+# Non-canonical (http OR non-www) → https://www.destinynumbers.in/<same path>
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.destinynumbers\.in$ [NC]
+RewriteRule ^(.*)$ https://www.destinynumbers.in/$1 [R=301,L]
 
 # Let PHP files through
 RewriteRule ^send-mail\.php$ - [L]
+
+# Set a CANONICAL_URL env var for every SPA route (used by the Link header below).
+# Only applies to routes that fall through to the SPA (not real static files).
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ - [E=CANONICAL_URL:https://www.destinynumbers.in/$1]
 
 # Serve existing files/dirs directly
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -11,3 +27,17 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Route everything else to index.html (React Router)
 RewriteRule ^ index.html [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://*.razorpay.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://api.razorpay.com https://generativelanguage.googleapis.com https://www.destinynumbers.in; frame-src https://*.razorpay.com https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.destinynumbers.in"
+
+    # Per-URL canonical via HTTP Link header (RFC 5988).
+    # Non-JS crawlers (Screaming Frog default mode) read this instead of the JS-injected <link rel=canonical>.
+    # env=CANONICAL_URL means: only emit when the RewriteRule above actually set it (so static files don't get a bogus canonical).
+    Header set Link "<%{CANONICAL_URL}e>; rel=\"canonical\"" env=CANONICAL_URL
+</IfModule>

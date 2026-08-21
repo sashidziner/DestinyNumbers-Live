@@ -83,7 +83,7 @@ export default function App() {
     <CMSProvider>
       <AuthProvider>
         <BrandProvider>
-          <Router basename="/demo">
+          <Router basename="/">
             <ScrollToTop />
             <AppLayout>
               <Routes>

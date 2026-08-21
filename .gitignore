@@ -6,5 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+!.env.production
 public/mail-config.php
 public/vendor/
+scripts/
