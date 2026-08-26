@@ -54,6 +54,7 @@ import VastuCorrections from './pages/VastuCorrections';
 import WealthVastu from './pages/WealthVastu';
 import Products from './pages/Products';
 import Checkout from './pages/Checkout';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -138,6 +139,7 @@ export default function App() {
                   <Route path="/privacy" element={<PrivacyPolicy />} />
                   <Route path="/terms" element={<TermsConditions />} />
                   <Route path="/refund" element={<RefundPolicy />} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
             </AppLayout>
           </Router>
