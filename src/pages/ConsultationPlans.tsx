@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useSEO } from '../lib/useSEO';
@@ -132,6 +132,7 @@ export function ConsultationPlans() {
   
   const [selectedPlan, setSelectedPlan] = useState<any | null>(null);
   const [isSuccess, setIsSuccess] = useState(false);
+  const minuteInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     dob: '',
@@ -468,7 +469,6 @@ export function ConsultationPlans() {
                           label="Full Name *"
                           value={formData.name}
                           onChange={val => setFormData({...formData, name: val})}
-                          placeholder="Arun Poovaiah"
                           error={formData.name === '' && formData.name !== undefined ? "Required" : ""}
                         />
                         <StandardDateInput
@@ -482,18 +482,59 @@ export function ConsultationPlans() {
                         <div className="space-y-4">
                           <label className="text-[12px] tracking-widest text-[#C9A84C] font-black uppercase font-display block">Time of Birth *</label>
                           <div className="flex gap-2">
-                            <input 
-                              type="text"
-                              placeholder="HH:MM"
-                              value={formData.birthTime}
-                              onChange={e => setFormData({...formData, birthTime: e.target.value})}
-                              className="flex-grow bg-white border border-[#0d1b3e]/10 rounded-none h-[52px] px-4 text-[#0d1b3e] outline-none focus:border-[#C9A84C] transition-all font-sans"
-                            />
-                            <div className="flex border border-[#0d1b3e]/10 rounded-none overflow-hidden">
+                            <div className="flex-grow flex items-center bg-white border border-warm-border rounded-none h-[52px] px-4 focus-within:border-[#C9A84C] transition-all">
+                              <input
+                                type="text"
+                                inputMode="numeric"
+                                maxLength={2}
+                                placeholder="HH"
+                                aria-label="Hour"
+                                value={(formData.birthTime || '').split(':')[0] ?? ''}
+                                onChange={e => {
+                                  const raw = e.target.value.replace(/\D/g, '').slice(0, 2);
+                                  const mm = (formData.birthTime || '').split(':')[1] ?? '';
+                                  // Auto-convert 24h → 12h + auto-select AM/PM once user finishes typing the hour.
+                                  if (raw.length === 2) {
+                                    const n = parseInt(raw, 10);
+                                    if (!Number.isNaN(n) && n <= 23) {
+                                      const period: 'AM' | 'PM' = n >= 12 ? 'PM' : 'AM';
+                                      const h12 = n === 0 ? 12 : n > 12 ? n - 12 : n;
+                                      setFormData({
+                                        ...formData,
+                                        birthTime: `${String(h12).padStart(2, '0')}:${mm}`,
+                                        birthTimePeriod: period,
+                                      });
+                                      minuteInputRef.current?.focus();
+                                      return;
+                                    }
+                                  }
+                                  setFormData({...formData, birthTime: `${raw}:${mm}`});
+                                }}
+                                className="w-8 bg-transparent text-center text-[#0d1b3e] outline-none font-sans tabular-nums"
+                              />
+                              <span className="px-1 text-[#0d1b3e]/60 select-none">:</span>
+                              <input
+                                ref={minuteInputRef}
+                                type="text"
+                                inputMode="numeric"
+                                maxLength={2}
+                                placeholder="MM"
+                                aria-label="Minute"
+                                value={(formData.birthTime || '').split(':')[1] ?? ''}
+                                onChange={e => {
+                                  const mm = e.target.value.replace(/\D/g, '').slice(0, 2);
+                                  const hh = (formData.birthTime || '').split(':')[0] ?? '';
+                                  setFormData({...formData, birthTime: `${hh}:${mm}`});
+                                }}
+                                className="w-8 bg-transparent text-center text-[#0d1b3e] outline-none font-sans tabular-nums"
+                              />
+                            </div>
+                            <div className="flex border border-warm-border rounded-none overflow-hidden">
                               {(['AM', 'PM'] as const).map(p => (
                                 <button
                                   key={p}
                                   type="button"
+                                  tabIndex={-1}
                                   onClick={() => setFormData({...formData, birthTimePeriod: p})}
                                   className={cn(
                                     "px-4 h-[52px] text-[10px] font-black tracking-widest transition-all",
@@ -527,7 +568,7 @@ export function ConsultationPlans() {
                                 "h-[52px] text-[10px] font-black tracking-widest uppercase transition-all",
                                 formData.gender === g 
                                 ? "bg-[#C9A84C] text-[#0d1b3e]" 
-                                : "bg-white border border-[#0d1b3e]/10 text-[#0d1b3e]/40 hover:text-[#0d1b3e]"
+                                : "bg-white border border-warm-border text-[#0d1b3e]/40 hover:text-[#0d1b3e]"
                           )}
                         >
                           {g}
@@ -541,14 +582,12 @@ export function ConsultationPlans() {
                       label="Mobile Number *"
                       value={formData.mobile}
                       onChange={val => setFormData({...formData, mobile: val})}
-                      placeholder="89712 25552"
                       error={formData.mobile && formData.mobile.length < 10 ? "Valid mobile required" : ""}
                     />
                     <StandardEmailInput
                       label="Email Address *"
                       value={formData.email}
                       onChange={val => setFormData({...formData, email: val})}
-                      placeholder="hello@destinynumber.in"
                       error={formData.email && !formData.email.includes('@') ? "Valid email required" : ""}
                     />
                   </div>
@@ -588,7 +627,7 @@ export function ConsultationPlans() {
                               type="datetime-local" 
                               value={formData.dateTime}
                               onChange={e => setFormData({...formData, dateTime: e.target.value})}
-                              className="w-full bg-white border border-[#0d1b3e]/10 rounded-none h-[52px] pl-[44px] pr-[16px] text-[#0d1b3e] outline-none focus:border-[#C9A84C] transition-all font-sans text-[16px] [color-scheme:light]"
+                              className="w-full bg-white border border-warm-border rounded-none h-[52px] pl-[44px] pr-[16px] text-[#0d1b3e] outline-none focus:border-[#C9A84C] transition-all font-sans text-[16px] [color-scheme:light]"
                            />
                         </div>
                       </div>

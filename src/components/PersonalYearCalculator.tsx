@@ -293,7 +293,7 @@ export function PersonalYearCalculator({ onBack }: { onBack?: () => void }) {
                     type="date"
                     value={dob}
                     onChange={(e) => setDob(e.target.value)}
-                    className="w-full bg-[#F5ECD7]/30 border border-[#1C3557]/15 p-4 text-[#1C3557] focus:outline-none focus:border-[#C9A84C]/60 text-sm tracking-wide font-sans rounded-none transition-all"
+                    className="w-full bg-[#F5ECD7]/30 border border-warm-border p-4 text-[#1C3557] focus:outline-none focus:border-[#C9A84C]/60 text-sm tracking-wide font-sans rounded-none transition-all"
                     required
                   />
                 </div>
@@ -307,7 +307,7 @@ export function PersonalYearCalculator({ onBack }: { onBack?: () => void }) {
                 <select
                   value={targetYear}
                   onChange={(e) => setTargetYear(parseInt(e.target.value, 10))}
-                  className="w-full bg-[#F5ECD7]/30 border border-[#1C3557]/15 p-4 text-[#1C3557] focus:outline-none focus:border-[#C9A84C]/60 text-sm tracking-wide font-sans rounded-none transition-all"
+                  className="w-full bg-[#F5ECD7]/30 border border-warm-border p-4 text-[#1C3557] focus:outline-none focus:border-[#C9A84C]/60 text-sm tracking-wide font-sans rounded-none transition-all"
                 >
                   {[2025, 2026, 2027, 2028, 2029, 2030].map(y => (
                     <option key={y} value={y}>{y} {y === new Date().getFullYear() ? "(Current Year)" : ""}</option>

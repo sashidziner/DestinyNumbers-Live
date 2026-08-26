@@ -411,7 +411,7 @@ export default function Home() {
                       value={calcName}
                       onChange={(e) => setCalcName(e.target.value)}
                       placeholder="Enter legal name..."
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:border-warm-accent outline-none transition-all placeholder:text-white/20 text-sm"
+                      className="w-full bg-white/10 border border-warm-border rounded-none px-4 py-3 text-white focus:border-warm-accent outline-none transition-all placeholder:text-white/20 text-sm"
                     />
                   </div>
                   <div>
@@ -420,7 +420,7 @@ export default function Home() {
                       type="date" 
                       value={calcDob}
                       onChange={(e) => setCalcDob(e.target.value)}
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:border-warm-accent outline-none transition-all placeholder:text-white/20 text-sm"
+                      className="w-full bg-white/10 border border-warm-border rounded-none px-4 py-3 text-white focus:border-warm-accent outline-none transition-all placeholder:text-white/20 text-sm"
                     />
                   </div>
                 </div>

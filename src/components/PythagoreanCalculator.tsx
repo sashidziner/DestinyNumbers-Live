@@ -161,7 +161,7 @@ export default function PythagoreanCalculator({ onBack }: { onBack?: () => void 
                   }
                 }}
                 placeholder="First, second/ full name"
-                className="w-full bg-white border border-[#C9A84C]/30 hover:border-[#C9A84C]/50 rounded-none py-1.5 px-3 md:py-2 md:px-4 text-black font-sans text-sm md:text-base tracking-wider focus:border-[#C9A84C] outline-none transition-all placeholder:text-[#474747] text-center"
+                className="w-full bg-white border border-warm-border hover:border-[#C9A84C]/50 rounded-none py-1.5 px-3 md:py-2 md:px-4 text-black font-sans text-sm md:text-base tracking-wider focus:border-[#C9A84C] outline-none transition-all placeholder:text-[#474747] text-center"
                 onKeyPress={(e) => e.key === 'Enter' && calculateResults()}
               />
               {error && (

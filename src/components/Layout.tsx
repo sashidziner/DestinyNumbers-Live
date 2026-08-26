@@ -717,12 +717,12 @@ export function Footer() {
             <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-8">Weekly Wisdom</h4>
             <p className="text-white/70 text-sm mb-6">One insight every Sunday. No noise. Just clarity.</p>
             <div className="flex flex-col gap-3">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Your email address"
-                className="bg-white/10 border border-white/20 rounded-md px-4 py-2.5 text-sm outline-none focus:border-warm-accent text-white"
+                className="bg-white/10 border border-warm-border rounded-none px-4 py-2.5 text-sm outline-none focus:border-warm-accent text-white"
               />
-              <button className="bg-white text-warm-accent font-bold py-2.5 rounded-md hover:bg-warm-bg-warm transition-colors">
+              <button className="bg-white text-warm-accent font-bold py-2.5 rounded-none hover:bg-warm-bg-warm transition-colors">
                 Subscribe
               </button>
             </div>

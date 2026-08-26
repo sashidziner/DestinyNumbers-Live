@@ -83,7 +83,7 @@ export const StandardInput: React.FC<FormFieldProps> = ({
           disabled={disabled}
           placeholder={placeholder}
           className={cn(
-            "w-full h-[52px] bg-white border border-[#E0D5C0] rounded-none text-[16px] text-mystic-navy outline-none transition-all placeholder:text-[#474747]",
+            "w-full h-[52px] bg-white border border-warm-border rounded-none text-[16px] text-mystic-navy outline-none transition-all placeholder:text-[#474747]",
             icon ? "pl-12" : "px-4",
             "pr-4",
             "focus:border-[#C9A84C]",
@@ -111,7 +111,7 @@ export const StandardNameInput: React.FC<FormFieldProps> = (props) => {
       {...props} 
       onChange={handleNameChange} 
       icon={<User size={20} />}
-      placeholder={props.placeholder || `Enter ${props.label.replace('*', '').trim()}`}
+      placeholder={props.placeholder ?? `Enter your ${props.label.replace('*', '').trim().toLowerCase()}`}
     />
   );
 };
@@ -130,7 +130,7 @@ export const StandardMobileInput: React.FC<FormFieldProps> = (props) => {
       type="tel"
       onChange={handleMobileChange} 
       icon={<Phone size={20} />}
-      placeholder={props.placeholder || "Enter mobile number"}
+      placeholder={props.placeholder ?? "Enter your mobile number"}
       inputClassName={cn("tracking-wider", props.inputClassName)}
     />
   );
@@ -142,7 +142,7 @@ export const StandardEmailInput: React.FC<FormFieldProps> = (props) => {
       {...props} 
       type="email"
       icon={<Mail size={20} />}
-      placeholder={props.placeholder || "name@email.com"}
+      placeholder={props.placeholder ?? "Enter your email address"}
     />
   );
 };
@@ -258,7 +258,7 @@ export const StandardDateInput: React.FC<FormFieldProps> = ({
             justifyContent: 'center',
             cursor: 'pointer',
             zIndex: 2,
-            borderRight: '1px solid #E0D5C0',
+            borderRight: '1px solid var(--color-warm-border)',
             background: '#F5ECD7',
             pointerEvents: 'all'
           }}
@@ -292,7 +292,7 @@ export const StandardDateInput: React.FC<FormFieldProps> = ({
             paddingRight: '16px',
             fontSize: '16px',
             fontFamily: 'inherit',
-            border: `1px solid ${combinedError && isTouched ? '#E8420E' : isTouched && !combinedError && value ? '#1D9E75' : '#E0D5C0'}`,
+            border: `1px solid ${combinedError && isTouched ? '#E8420E' : isTouched && !combinedError && value ? '#1D9E75' : 'var(--color-warm-border)'}`,
             borderRadius: '0',
             boxSizing: 'border-box',
             outline: 'none',
@@ -351,7 +351,7 @@ export const StandardTextArea: React.FC<FormFieldProps & { rows?: number }> = ({
         placeholder={placeholder}
         rows={rows}
         className={cn(
-          "w-full bg-white border border-[#E0D5C0] rounded-none p-4 text-[16px] text-mystic-navy outline-none transition-all placeholder:text-[#474747]",
+          "w-full bg-white border border-warm-border rounded-none p-4 text-[16px] text-mystic-navy outline-none transition-all placeholder:text-[#474747]",
           "focus:border-[#C9A84C]",
           error && isTouched && "border-[#E8420E]",
           !error && isTouched && value && "border-[#1D9E75]",
@@ -397,7 +397,7 @@ export const StandardSelect: React.FC<FormFieldProps & { options: { value: strin
           onBlur={handleBlur}
           disabled={disabled}
           className={cn(
-            "w-full h-[52px] bg-white border border-[#E0D5C0] rounded-none text-[16px] text-mystic-navy outline-none transition-all appearance-none",
+            "w-full h-[52px] bg-white border border-warm-border rounded-none text-[16px] text-mystic-navy outline-none transition-all appearance-none",
             icon ? "pl-12" : "px-4",
             "pr-10",
             "focus:border-[#C9A84C]",

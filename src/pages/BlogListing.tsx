@@ -56,7 +56,7 @@ export default function BlogListing() {
               <input 
                 type="text" 
                 placeholder="Search the archives..."
-                className="w-full bg-white border border-warm-border rounded-full py-3 pl-12 pr-6 text-sm outline-none focus:border-warm-accent transition-all"
+                className="w-full bg-white border border-warm-border rounded-none py-3 pl-12 pr-6 text-sm outline-none focus:border-warm-accent transition-all"
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
               />
@@ -180,12 +180,12 @@ export default function BlogListing() {
                 One insight every Sunday. No noise. Just clarity.
               </p>
               <div className="flex flex-col gap-3">
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="Your email address"
-                  className="bg-white/10 border border-white/20 rounded-md px-4 py-2.5 text-sm outline-none focus:border-white/40 placeholder:text-white/50"
+                  className="bg-white/10 border border-warm-border rounded-none px-4 py-2.5 text-sm outline-none focus:border-white/40 placeholder:text-white/50"
                 />
-                <button className="bg-white text-warm-accent font-bold py-2.5 rounded-md hover:bg-white/90 transition-colors">
+                <button className="bg-white text-warm-accent font-bold py-2.5 rounded-none hover:bg-white/90 transition-colors">
                   Subscribe
                 </button>
               </div>

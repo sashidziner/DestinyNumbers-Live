@@ -155,7 +155,7 @@ export function NameNumerologyCalculator({ onBack }: { onBack?: () => void }) {
                         value={name}
                         onChange={(e) => setName(e.target.value.replace(/[0-9]/g, ''))}
                         placeholder="Legal Name..."
-                        className="w-full bg-white border border-royal-gold/20 rounded-xl px-6 py-4 text-black font-display text-lg tracking-widest focus:border-royal-gold outline-none transition-all placeholder:text-[#474747]"
+                        className="w-full bg-white border border-warm-border rounded-none px-6 py-4 text-black font-display text-lg tracking-widest focus:border-royal-gold outline-none transition-all placeholder:text-[#474747]"
                       />
                    </div>
                    <div>
@@ -164,7 +164,7 @@ export function NameNumerologyCalculator({ onBack }: { onBack?: () => void }) {
                         type="date"
                         value={dob}
                         onChange={(e) => setDob(e.target.value)}
-                        className="w-full bg-white border border-royal-gold/20 rounded-xl px-6 py-4 text-black font-display text-lg tracking-widest focus:border-royal-gold outline-none transition-all"
+                        className="w-full bg-white border border-warm-border rounded-none px-6 py-4 text-black font-display text-lg tracking-widest focus:border-royal-gold outline-none transition-all"
                       />
                    </div>
                 </div>
